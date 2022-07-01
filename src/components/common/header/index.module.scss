@@ -1,0 +1,35 @@
+@import '../../../common.scss';
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1.875rem 2.5rem 3.125rem;
+  box-sizing: border-box;
+
+  > .gnb {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > li {
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 500;
+
+      > h1 > a > img {
+        width: 100%;
+        max-width: 6.25rem;
+      }
+
+      > a {
+        @include fontEn;
+      }
+    }
+  }
+}
