@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import S01 from './s01';
 import S02 from './s02';
 import S03 from './s03';
+import S04 from './s04';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +14,7 @@ const Home = () => {
       <S01 />
       <S02 />
       <S03 />
+      <S04 />
     </main>
   );
 };

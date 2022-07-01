@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 
-import Header from './components/common/header';
-import Footer from './components/common/footer';
+import Header from './components/global/header';
+import Footer from './components/global/footer';
 import Home from './pages/home';
 import Intro from './pages/intro';
 
@@ -19,9 +19,9 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Header />
+      {isWelcome && <Header />}
       <Routes>{isWelcome ? <Route path="/" element={<Home />} /> : <Route path="/" element={<Intro />} />}</Routes>
-      <Footer />
+      {isWelcome && <Footer />}
     </BrowserRouter>
   );
 };

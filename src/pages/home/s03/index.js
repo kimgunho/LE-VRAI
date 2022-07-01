@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import classNames from 'classnames/bind';
 import gsap from 'gsap';
 
-import AutoCarousel from '../../../components/autoCarousel';
+import AutoCarousel from '../../../components/global/autoCarousel';
 
 import styles from './index.module.scss';
 
