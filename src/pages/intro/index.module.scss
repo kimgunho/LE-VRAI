@@ -1,0 +1,70 @@
+@import '../../common.scss';
+
+$pink: #ff6ca5;
+$blue: #2851e8;
+$green: #1ca55b;
+$red: #ec363e;
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &.pink {
+    background-color: $pink;
+  }
+  &.blue {
+    background-color: $blue;
+  }
+  &.green {
+    background-color: $green;
+  }
+  &.red {
+    background-color: $red;
+  }
+
+  > .logo {
+    width: 11.25rem;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  > .cover {
+    width: 11.25rem;
+    height: 5rem;
+    opacity: 0.8;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    animation: moveRightAnimation 2.5s forwards linear;
+
+    &.pink {
+      background-color: $pink;
+    }
+    &.blue {
+      background-color: $blue;
+    }
+    &.green {
+      background-color: $green;
+    }
+    &.red {
+      background-color: $red;
+    }
+  }
+
+  @keyframes moveRightAnimation {
+    0% {
+      left: 50%;
+    }
+    100% {
+      left: calc(50% + 11.25rem);
+    }
+  }
+}
