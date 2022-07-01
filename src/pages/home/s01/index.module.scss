@@ -1,0 +1,38 @@
+@import '../../../common.scss';
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../../asset/images/home/s01_background.jpg');
+  @include backgroundCenter;
+
+  > .info {
+    > .title {
+      font-size: 15rem;
+      color: #fff;
+      font-weight: 600;
+      @include fontEn;
+    }
+    > .desc {
+      text-align: center;
+      color: #fff;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      font-weight: 600;
+      animation: fadeIn 2s forwards ease-in;
+      @include fontEn;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../common.scss';
+
+.container {
+  background-color: #f8f8f8;
+  padding: 2rem 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  > li {
+    width: fit-content;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #000;
+    white-space: nowrap;
+    margin-right: 1rem;
+    @include fontEn;
+
+    &:first-of-type {
+      animation: moveInfinityRight 15s infinite linear;
+    }
+  }
+
+  @keyframes moveInfinityRight {
+    0% {
+      margin-left: 0%;
+    }
+    100% {
+      margin-left: -90%;
+    }
+  }
+}
