@@ -1,0 +1,35 @@
+@import '../../../common.scss';
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.08);
+
+  > .info {
+    text-align: center;
+
+    > .desc {
+      font-size: 4rem;
+      color: #000;
+      font-weight: 300;
+      line-height: 1.8;
+      margin-bottom: 5.625rem;
+
+      > span {
+        transition: opacity 0.2s ease-in;
+        opacity: 0.1;
+      }
+    }
+
+    > .subDesc {
+      font-size: 1.5rem;
+      color: #000;
+      font-weight: 400;
+      @include fontEn;
+    }
+  }
+}
