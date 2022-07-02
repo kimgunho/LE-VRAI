@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
+
+import LinkButton from '../../global/linkButton';
 
 import redBalm_left from '../../../asset/images/home/redCard_item_left.png';
 import redBalm_right from '../../../asset/images/home/redCard_item_right.png';
@@ -59,9 +60,7 @@ const ProductCard = ({ data }) => {
         <span className={cx('subTitle')}>{data.descTitle}</span>
         {data.desc}
       </p>
-      <Link className={cx('shopButton')} to={data.link}>
-        Shop now
-      </Link>
+      <LinkButton title={'SHOP NOW'} link={data.link} />
     </div>
   );
 };

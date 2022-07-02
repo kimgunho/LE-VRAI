@@ -33,7 +33,6 @@ const S05 = () => {
           scrub: true,
           start: 'top center',
           end: 'center+=30% center',
-          markers: true,
         },
       })
       .to(line01Ref.current, { opacity: 1 })
@@ -52,30 +51,28 @@ const S05 = () => {
       .to(line14Ref.current, { opacity: 1 });
   }, []);
   return (
-    <>
-      <section className={cx('wrapper')} ref={wrapperRef}>
-        <div className={cx('info')}>
-          <p className={cx('desc')}>
-            <span ref={line01Ref}>Premium </span>
-            <span ref={line02Ref}>Vegan </span>
-            <span ref={line03Ref}>Cosmetics </span>
-            <span ref={line04Ref}>for </span>
-            <span ref={line05Ref}>Kids </span>
-            <br />
-            <span ref={line06Ref}>that </span>
-            <span ref={line07Ref}>fills </span>
-            <span ref={line08Ref}>the </span>
-            <span ref={line09Ref}>happy </span>
-            <span ref={line10Ref}>moments </span>
-            <span ref={line11Ref}>of </span>
-            <span ref={line12Ref}>mothers </span>
-            <span ref={line13Ref}>and </span>
-            <span ref={line14Ref}>children</span>
-          </p>
-          <img className={cx('logo')} src={logo} alt="" />
-        </div>
-      </section>
-    </>
+    <section className={cx('wrapper')} ref={wrapperRef}>
+      <div className={cx('info')}>
+        <p className={cx('desc')}>
+          <span ref={line01Ref}>Premium </span>
+          <span ref={line02Ref}>Vegan </span>
+          <span ref={line03Ref}>Cosmetics </span>
+          <span ref={line04Ref}>for </span>
+          <span ref={line05Ref}>Kids </span>
+          <br />
+          <span ref={line06Ref}>that </span>
+          <span ref={line07Ref}>fills </span>
+          <span ref={line08Ref}>the </span>
+          <span ref={line09Ref}>happy </span>
+          <span ref={line10Ref}>moments </span>
+          <span ref={line11Ref}>of </span>
+          <span ref={line12Ref}>mothers </span>
+          <span ref={line13Ref}>and </span>
+          <span ref={line14Ref}>children</span>
+        </p>
+        <img className={cx('logo')} src={logo} alt="" />
+      </div>
+    </section>
   );
 };
 
