@@ -8,6 +8,11 @@
   background-size: cover;
 }
 
+@mixin pc_hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
 @mixin desktop {
   @media screen and (min-width: 1069px) {
     @content;

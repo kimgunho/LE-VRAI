@@ -8,5 +8,13 @@
   padding: 1.625rem 3.625rem;
   margin-top: 2.8125rem;
   border: 1px solid #fff;
+  transition: all 0.2s ease-in;
   @include fontEn;
+
+  @include pc_hover {
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
 }

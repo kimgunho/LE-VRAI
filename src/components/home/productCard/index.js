@@ -52,9 +52,9 @@ const ProductCard = ({ data }) => {
     <div className={cx('container')}>
       <p className={cx('desc', `${data.color}`)}>Coco Multi Balm</p>
       <div className={cx('titleBox')}>
-        <img className={cx('balm', 'left', `${data.color}`)} src={getCurrentColorImage('left')} alt="" />
+        <img className={cx('balm', 'left', `${data.color}`)} src={getCurrentColorImage('left')} alt="" draggable={false} />
         <h3 className={cx('title', `${data.color}`)}>{data.title}</h3>
-        <img className={cx('balm', 'right', `${data.color}`)} src={getCurrentColorImage('right')} alt="" />
+        <img className={cx('balm', 'right', `${data.color}`)} src={getCurrentColorImage('right')} alt="" draggable={false} />
       </div>
       <p className={cx('subDesc')}>
         <span className={cx('subTitle')}>{data.descTitle}</span>
