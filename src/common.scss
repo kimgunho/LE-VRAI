@@ -1,3 +1,13 @@
+@mixin fontEn {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin backgroundCenter {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @mixin desktop {
   @media screen and (min-width: 1069px) {
     @content;

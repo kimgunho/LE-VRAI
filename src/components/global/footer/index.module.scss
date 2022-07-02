@@ -1,0 +1,53 @@
+@import '../../../common.scss';
+
+.footer {
+  padding: 6.25rem 5rem 3.75rem;
+  box-sizing: border-box;
+  background-color: #000;
+
+  > .title {
+    color: #fff;
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin-bottom: 6.875rem;
+    @include fontEn;
+  }
+
+  > .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    > .info {
+      > li {
+        > a {
+          color: #fff;
+          font-size: 1rem;
+          line-height: 1.8;
+          @include fontEn;
+        }
+      }
+    }
+  }
+
+  > .copyright {
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+    @include fontEn;
+
+    > img {
+      width: 100%;
+      max-width: 6.875rem;
+      padding-bottom: 1rem;
+      display: block;
+    }
+  }
+}

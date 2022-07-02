@@ -1,0 +1,19 @@
+@import '../../../common.scss';
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../../asset/images/home/s02_background.jpg');
+  @include backgroundCenter;
+
+  > .desc {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+}
