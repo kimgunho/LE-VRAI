@@ -31,19 +31,6 @@
         }
       }
     }
-
-    > .contact {
-      display: block;
-      border: 1px solid #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.625rem 3.125rem;
-      border-radius: 50%;
-      color: #fff;
-      @include fontEn;
-      font-size: 1.5rem;
-    }
   }
 
   > .copyright {

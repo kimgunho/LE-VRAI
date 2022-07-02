@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
+
+import LinkButton from '../linkButton';
 
 import logo from '../../../asset/images/global/logo.png';
 
@@ -25,9 +26,7 @@ const Footer = () => {
           </li>
         </ul>
 
-        <Link className={cx('contact')} to="/contact">
-          CONTACT US
-        </Link>
+        <LinkButton title={'CONTACT US'} link="/" />
       </div>
       <p className={cx('copyright')}>
         <img src={logo} alt="LE VRAI" />© 2022
