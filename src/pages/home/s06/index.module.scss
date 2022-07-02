@@ -6,7 +6,7 @@
   position: relative;
   background-image: url('../../../asset//images/home/s06_background.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 100vh;
+  background-size: cover;
   background-position: center top;
 
   > .flex {
@@ -21,6 +21,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0 2rem;
+    box-sizing: border-box;
 
     > .title {
       color: #fff;
@@ -28,7 +30,16 @@
       font-size: 7.5rem;
       line-height: 1;
       margin-bottom: 1.875rem;
+      white-space: nowrap;
       @include fontEn;
+
+      @include tablet {
+        font-size: 5rem;
+      }
+      @include mobile {
+        line-height: 1.2;
+        font-size: 3rem;
+      }
     }
 
     > .desc {
@@ -36,6 +47,17 @@
       color: #fff;
       font-weight: 400;
       line-height: 1.8;
+      word-break: keep-all;
+
+      @include tablet {
+        font-size: 1.25rem;
+        > br {
+          display: none;
+        }
+      }
+      @include mobile {
+        font-size: 1rem;
+      }
     }
   }
 

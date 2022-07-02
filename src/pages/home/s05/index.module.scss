@@ -11,13 +11,22 @@
 
   > .info {
     text-align: center;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
 
     > .desc {
       font-size: 3.625rem;
       color: #fff;
+      word-break: keep-all;
       font-weight: 300;
       line-height: 1.8;
       margin-bottom: 5.625rem;
+
+      @include tablet {
+        > br {
+          display: none;
+        }
+      }
 
       > span {
         transition: opacity 0.2s ease-in;
