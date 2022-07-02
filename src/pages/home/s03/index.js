@@ -56,14 +56,14 @@ const S03 = () => {
             <span ref={line03Ref}>르브레의 </span>
             <span ref={line04Ref}>첫 </span>
             <span ref={line05Ref}>번째 </span>
-            <span ref={line06Ref}>프로젝트</span>
+            <span ref={line06Ref}>프로젝트 </span>
             <br />
             <span ref={line07Ref}>프리미엄 </span>
             <span ref={line08Ref}>비건 </span>
             <span ref={line09Ref}>키즈 </span>
             <span ref={line10Ref}>코스메틱 </span>
             <span ref={line11Ref}>로로&amp;코코 </span>
-            <span ref={line12Ref}>멀티밤</span>
+            <span ref={line12Ref}>멀티밤 </span>
           </p>
           <p className={cx('subDesc')}> RORO &amp; COCO MULTI BALM </p>
         </div>
