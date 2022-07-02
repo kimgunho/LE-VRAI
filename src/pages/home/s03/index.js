@@ -30,7 +30,7 @@ const S03 = () => {
           trigger: wrapperRef.current,
           scrub: true,
           start: 'center-=30% center',
-          end: 'center+=30% center',
+          end: 'center center',
         },
       })
       .to(line01Ref.current, { opacity: 1 })

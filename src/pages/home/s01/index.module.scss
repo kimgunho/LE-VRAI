@@ -22,17 +22,7 @@
       font-size: 1.5rem;
       line-height: 1.6;
       font-weight: 600;
-      animation: fadeIn 2s forwards ease-in;
       @include fontEn;
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
     }
   }
 }
