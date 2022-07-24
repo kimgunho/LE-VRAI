@@ -31,8 +31,10 @@ const S05 = () => {
         scrollTrigger: {
           trigger: wrapperRef.current,
           scrub: true,
-          start: 'top center',
-          end: 'center+=30% center',
+          pin: true,
+          start: 'top top',
+          end: '+=100%',
+          pinSpacing: true,
         },
       })
       .to(line01Ref.current, { opacity: 1 })

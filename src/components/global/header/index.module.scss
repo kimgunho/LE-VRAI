@@ -12,10 +12,6 @@
   box-sizing: border-box;
   z-index: 50;
 
-  @include mobile {
-    display: none;
-  }
-
   > .gnb {
     width: 100%;
     display: flex;

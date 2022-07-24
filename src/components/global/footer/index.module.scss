@@ -5,40 +5,23 @@
   box-sizing: border-box;
   background-color: #000;
 
-  @include mobile {
-    padding: 3.25rem 2.5rem 2.5rem;
-  }
-
   > .title {
     color: #fff;
     font-size: 4.5rem;
     font-weight: 600;
     margin-bottom: 6.875rem;
     @include fontEn;
-
-    @include mobile {
-      font-size: 3rem;
-      margin-bottom: 5rem;
-    }
   }
 
   > .flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding-bottom: 2.5rem;
     margin-bottom: 2.5rem;
 
-    @include mobile {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
     > .info {
-      @include mobile {
-        margin-bottom: 2rem;
-      }
       > li {
         > a {
           color: #fff;

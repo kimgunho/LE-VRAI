@@ -13,7 +13,7 @@
       width: 100vw;
 
       &:first-of-type {
-        animation: moveLeftAnimation 5s infinite linear;
+        animation: moveLeftAnimation 10s infinite linear;
       }
 
       @keyframes moveLeftAnimation {

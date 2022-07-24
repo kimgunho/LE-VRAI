@@ -18,16 +18,6 @@ $blue: #496ef8;
     text-transform: uppercase;
     @include fontEn;
 
-    @include desktop {
-      font-size: 3rem;
-    }
-    @include tablet {
-      font-size: 2rem;
-    }
-    @include mobile {
-      font-size: 1.5rem;
-    }
-
     &.red {
       color: $red;
     }
@@ -52,16 +42,6 @@ $blue: #496ef8;
       font-weight: 600;
       @include fontEn;
 
-      @include desktop {
-        font-size: 12rem;
-      }
-      @include tablet {
-        font-size: 8rem;
-      }
-      @include mobile {
-        font-size: 5rem;
-      }
-
       &.red {
         color: $red;
       }
@@ -85,71 +65,31 @@ $blue: #496ef8;
         animation: slowBounceUp 3s infinite ease-in;
         &.red {
           width: 100%;
-          max-width: 15rem;
+          max-width: 25rem;
           z-index: 20;
           top: 14.375rem;
-          left: -6.25rem;
-
-          @include tablet {
-            max-width: 12.5rem;
-            top: 12rem;
-            z-index: 10;
-          }
-          @include mobile {
-            max-width: 10rem;
-            top: 4rem;
-          }
+          left: -18.25rem;
         }
 
         &.pink {
           width: 100%;
-          max-width: 15rem;
+          max-width: 25rem;
           top: 16.875rem;
-          left: -10rem;
-
-          @include tablet {
-            max-width: 14.375rem;
-            top: 14.875rem;
-          }
-          @include mobile {
-            max-width: 12.075rem;
-            top: 2.875rem;
-          }
+          left: -18rem;
         }
 
         &.green {
           width: 100%;
-          max-width: 20rem;
+          max-width: 30rem;
           top: 20rem;
-          left: -9rem;
-
-          @include desktop {
-            top: 14rem;
-          }
-
-          @include tablet {
-            max-width: 17.5rem;
-            top: 10rem;
-          }
-          @include mobile {
-            max-width: 15rem;
-            top: 7rem;
-          }
+          left: -18rem;
         }
 
         &.blue {
           width: 100%;
-          max-width: 18rem;
+          max-width: 25rem;
           top: 9.0625rem;
-          left: -11.875rem;
-
-          @include tablet {
-            max-width: 15.5rem;
-          }
-          @include mobile {
-            max-width: 13rem;
-            top: 6.0625rem;
-          }
+          left: -16.875rem;
         }
       }
 
@@ -158,71 +98,33 @@ $blue: #496ef8;
         &.red {
           width: 100%;
           z-index: 20;
-          max-width: 18rem;
-          right: -3.75rem;
+          max-width: 25rem;
+          right: -13.75rem;
           top: 7.5rem;
-
-          @include tablet {
-            max-width: 15.5rem;
-            right: -8rem;
-          }
-          @include mobile {
-            max-width: 13rem;
-          }
         }
 
         &.pink {
           width: 100%;
           z-index: 20;
-          max-width: 18rem;
-          right: -12.75rem;
+          max-width: 25rem;
+          right: -18.75rem;
           top: 8.5rem;
-
-          @include tablet {
-            max-width: 15.5rem;
-          }
-          @include mobile {
-            max-width: 13rem;
-          }
         }
 
         &.green {
           width: 100%;
           z-index: 20;
-          max-width: 12rem;
-          right: -11.875rem;
+          max-width: 16rem;
+          right: -15.875rem;
           top: 10.625rem;
-
-          @include tablet {
-            max-width: 9.5rem;
-            top: 3.625rem;
-            right: -8.875rem;
-          }
-          @include mobile {
-            max-width: 7rem;
-          }
         }
 
         &.blue {
           width: 100%;
           z-index: 20;
-          max-width: 20rem;
-          right: -15rem;
+          max-width: 26rem;
+          right: -19rem;
           top: 16.25rem;
-
-          @include desktop {
-            top: 13.25rem;
-          }
-
-          @include tablet {
-            max-width: 17.5rem;
-            top: 10.25rem;
-          }
-          @include mobile {
-            max-width: 15rem;
-            top: 6.25rem;
-            right: -12rem;
-          }
         }
       }
 
@@ -251,10 +153,6 @@ $blue: #496ef8;
     z-index: 30;
     margin-bottom: 2.8725rem;
     box-sizing: border-box;
-
-    @include tablet {
-      margin-top: 2rem;
-    }
 
     > .subTitle {
       line-height: normal;
