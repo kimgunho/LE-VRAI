@@ -16,16 +16,6 @@
     color: #fff;
     font-size: 2rem;
     line-height: 1.6;
-    font-weight: 500;
-
-    @include tablet {
-      font-size: 1.5rem;
-      > br {
-        display: none;
-      }
-    }
-    @include mobile {
-      font-size: 1.25rem;
-    }
+    font-weight: 400;
   }
 }

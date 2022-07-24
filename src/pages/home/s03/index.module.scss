@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  overflow: hidden;
+  position: relative;
   background-color: rgba(0, 0, 0, 0.08);
 
   > .info {
@@ -46,5 +46,12 @@
         font-size: 1.25rem;
       }
     }
+  }
+
+  > .bottomBox {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }

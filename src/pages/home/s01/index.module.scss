@@ -17,13 +17,6 @@
       text-align: center;
       white-space: nowrap;
       @include fontEn;
-
-      @include tablet {
-        font-size: 10rem;
-      }
-      @include mobile {
-        font-size: 5rem;
-      }
     }
     > .desc {
       padding: 0 2rem;
@@ -33,11 +26,17 @@
       font-size: 1.5rem;
       line-height: 1.6;
       font-weight: 600;
+      opacity: 0;
+      animation: fadeIn 3s forwards linear;
       @include fontEn;
 
-      @include mobile {
-        margin-top: 1rem;
-        font-size: 1rem;
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
       }
     }
   }

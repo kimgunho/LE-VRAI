@@ -16,8 +16,10 @@ const S02 = () => {
         scrollTrigger: {
           trigger: wrapperRef.current,
           scrub: true,
-          start: 'center-=20% center',
-          end: 'center+=20% center',
+          pin: true,
+          start: 'top top',
+          end: '+=100%',
+          pinSpacing: true,
         },
       })
       .fromTo(descRef.current, { opacity: 0 }, { opacity: 1 });
