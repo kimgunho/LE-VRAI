@@ -11,10 +11,6 @@
   transition: all 0.2s ease-in;
   @include fontEn;
 
-  @include mobile {
-    font-size: 1.25rem;
-  }
-
   @include pc_hover {
     &:hover {
       background-color: #fff;

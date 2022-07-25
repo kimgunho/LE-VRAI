@@ -5,16 +5,30 @@ const cx = classNames.bind(styles);
 
 const AutoCarousel = () => {
   return (
-    <ul className={cx('container')}>
-      <li>COLORFUL HIGH FUNCTION * </li>
-      <li>FRANCE BOTANICAL TREATMENT * </li>
-      <li>REAL VEGAN PRODUCT * </li>
-      <li>COLORFUL HIGH FUNCTION * </li>
-      <li>FRANCE BOTANICAL TREATMENT * </li>
-      <li>REAL VEGAN PRODUCT * </li>
-      <li>COLORFUL HIGH FUNCTION * </li>
-      <li>FRANCE BOTANICAL TREATMENT * </li>
-    </ul>
+    <div className={cx('container')}>
+      <ul className={cx('autoSlider')}>
+        <li>
+          <ul>
+            <li>COLORFUL HIGH FUNCTION </li>
+            <li>*</li>
+            <li>FRANCE BOTANICAL TREATMENT </li>
+            <li>*</li>
+            <li>REAL VEGAN PRODUCT </li>
+            <li>*</li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>COLORFUL HIGH FUNCTION </li>
+            <li>*</li>
+            <li>FRANCE BOTANICAL TREATMENT </li>
+            <li>*</li>
+            <li>REAL VEGAN PRODUCT </li>
+            <li>*</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   );
 };
 

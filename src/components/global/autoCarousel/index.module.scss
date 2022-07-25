@@ -2,32 +2,43 @@
 
 .container {
   background-color: #f8f8f8;
-  padding: 2rem 0;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  width: 100%;
+  width: 100vw;
 
-  > li {
-    width: fit-content;
-    font-size: 1.75rem;
-    font-weight: 500;
-    color: #000;
-    white-space: nowrap;
-    margin-right: 1rem;
-    @include fontEn;
+  > .autoSlider {
+    display: flex;
+    align-items: center;
+    width: 200vw;
+    > li {
+      width: 100vw;
 
-    &:first-of-type {
-      animation: moveInfinityRight 15s infinite linear;
-    }
-  }
+      &:first-of-type {
+        animation: moveLeftAnimation 10s infinite linear;
+      }
 
-  @keyframes moveInfinityRight {
-    0% {
-      margin-left: 0%;
-    }
-    100% {
-      margin-left: -90%;
+      @keyframes moveLeftAnimation {
+        0% {
+          margin-left: 0%;
+        }
+        100% {
+          margin-left: -50%;
+        }
+      }
+
+      > ul {
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        > li {
+          font-size: 1.75rem;
+          font-weight: 500;
+          color: #000;
+          white-space: nowrap;
+          @include fontEn;
+        }
+      }
     }
   }
 }

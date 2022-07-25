@@ -29,35 +29,17 @@
       font-weight: 600;
       font-size: 7.5rem;
       line-height: 1;
-      margin-bottom: 1.875rem;
+      margin-bottom: 2rem;
       @include fontEn;
-
-      @include tablet {
-        font-size: 5rem;
-      }
-      @include mobile {
-        line-height: 1.2;
-        font-size: 3rem;
-      }
     }
 
     > .descBox .desc {
       font-size: 1.75rem;
       color: #fff;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 1.8;
       margin-bottom: 5rem;
       word-break: keep-all;
-
-      @include tablet {
-        font-size: 1.25rem;
-        > br {
-          display: none;
-        }
-      }
-      @include mobile {
-        font-size: 1rem;
-      }
     }
   }
 

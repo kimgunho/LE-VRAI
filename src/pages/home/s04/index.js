@@ -7,20 +7,20 @@ import ProductCard from '../../../components/home/productCard';
 import styles from './index.module.scss';
 
 const cx = classNames.bind(styles);
-gsap.defaults({ ease: 'none', duration: 3 });
+gsap.defaults({ ease: 'none', duration: 10 });
 
 const productArr = [
   {
     title: 'ROUGE',
     descTitle: '코코 루즈',
-    desc: '수분감 가득한 페이스앤립용 비건 케어 칼라 멀티밤',
+    desc: '수분감 가득한 페이스앤립용 비건 컬러 멀티밤',
     link: '/',
     color: 'red',
   },
   {
     title: 'ROSE',
     descTitle: '코코 루즈',
-    desc: '수분감 가득한 페이스앤립용 비건 케어 칼라 멀티밤',
+    desc: '수분감 가득한 페이스앤립용 비건 컬러 멀티밤',
     link: '/',
     color: 'pink',
   },
@@ -52,7 +52,9 @@ const S04 = () => {
           scrub: true,
           pin: true,
           start: 'top top',
-          end: '400% bottom',
+          end: '+=800%',
+          pinSpacing: true,
+          snap: [0, 0.33333, 0.66666, 1],
         },
       })
       .to(flexRef.current, { left: '-100%', backgroundColor: '#FF6CA5' })
