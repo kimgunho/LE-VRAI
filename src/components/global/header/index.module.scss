@@ -8,9 +8,18 @@
   width: 100%;
   top: 0;
   left: 0;
-  padding: 1.875rem 2.5rem 3.125rem;
+  padding: 2.25rem 2.5rem;
   box-sizing: border-box;
   z-index: 50;
+  transition: background-color 0.5s ease;
+
+  &.active {
+    background-color: #fff;
+
+    > .gnb > li > a {
+      color: #000;
+    }
+  }
 
   > .gnb {
     width: 100%;
@@ -19,7 +28,6 @@
     justify-content: space-between;
 
     > li {
-      color: #fff;
       font-size: 1.25rem;
       font-weight: 500;
 
@@ -29,6 +37,8 @@
       }
 
       > a {
+        transition: background-color 0.5s ease;
+        color: #fff;
         @include fontEn;
       }
     }

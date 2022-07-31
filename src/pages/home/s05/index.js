@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import classNames from 'classnames/bind';
 import gsap from 'gsap';
 
-import logo from '../../../asset/images/global/logo.png';
+import logo from '../../../asset/images/global/logo_white.png';
 
 import styles from './index.module.scss';
 

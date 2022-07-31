@@ -65,31 +65,34 @@ $blue: #496ef8;
         animation: slowBounceUp 3s infinite ease-in;
         &.red {
           width: 100%;
-          max-width: 25rem;
+          max-width: 21rem;
           z-index: 20;
           top: 14.375rem;
-          left: -18.25rem;
+          left: -13.25rem;
         }
 
         &.pink {
           width: 100%;
-          max-width: 25rem;
+          max-width: 20rem;
           top: 16.875rem;
-          left: -18rem;
+          left: -14rem;
+          z-index: 20;
         }
 
         &.green {
           width: 100%;
-          max-width: 30rem;
+          max-width: 27rem;
           top: 20rem;
-          left: -18rem;
+          z-index: 20;
+          left: -15rem;
         }
 
         &.blue {
           width: 100%;
-          max-width: 25rem;
+          max-width: 21rem;
           top: 9.0625rem;
-          left: -16.875rem;
+          left: -12.875rem;
+          z-index: 20;
         }
       }
 
@@ -98,31 +101,31 @@ $blue: #496ef8;
         &.red {
           width: 100%;
           z-index: 20;
-          max-width: 25rem;
-          right: -13.75rem;
+          max-width: 22rem;
+          right: -8.75rem;
           top: 7.5rem;
         }
 
         &.pink {
           width: 100%;
           z-index: 20;
-          max-width: 25rem;
-          right: -18.75rem;
+          max-width: 21rem;
+          right: -15.75rem;
           top: 8.5rem;
         }
 
         &.green {
           width: 100%;
           z-index: 20;
-          max-width: 16rem;
-          right: -15.875rem;
+          max-width: 15rem;
+          right: -12.875rem;
           top: 10.625rem;
         }
 
         &.blue {
           width: 100%;
           z-index: 20;
-          max-width: 26rem;
+          max-width: 25rem;
           right: -19rem;
           top: 16.25rem;
         }

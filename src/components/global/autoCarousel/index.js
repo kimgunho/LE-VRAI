@@ -9,22 +9,22 @@ const AutoCarousel = () => {
       <ul className={cx('autoSlider')}>
         <li>
           <ul>
-            <li>COLORFUL HIGH FUNCTION </li>
-            <li>*</li>
-            <li>FRANCE BOTANICAL TREATMENT </li>
-            <li>*</li>
-            <li>REAL VEGAN PRODUCT </li>
-            <li>*</li>
+            {Array.from(Array(3).keys()).map((_, index) => (
+              <>
+                <li key={index}>CLEAN &amp; NATURAL TREATMENT</li>
+                <li key={`*_${index}`}>*</li>
+              </>
+            ))}
           </ul>
         </li>
         <li>
           <ul>
-            <li>COLORFUL HIGH FUNCTION </li>
-            <li>*</li>
-            <li>FRANCE BOTANICAL TREATMENT </li>
-            <li>*</li>
-            <li>REAL VEGAN PRODUCT </li>
-            <li>*</li>
+            {Array.from(Array(3).keys()).map((_, index) => (
+              <>
+                <li key={index}>CLEAN &amp; NATURAL TREATMENT</li>
+                <li key={`*_${index}`}>*</li>
+              </>
+            ))}
           </ul>
         </li>
       </ul>
