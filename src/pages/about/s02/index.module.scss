@@ -1,0 +1,52 @@
+@import '../../../common.scss';
+
+.wrapper {
+  background-color: #184d35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 7.5rem 0;
+  text-align: center;
+
+  > .title {
+    width: 8.75rem;
+    margin-bottom: 5.25rem;
+    > img {
+      width: 100%;
+    }
+  }
+  > .desc {
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 6.25rem;
+
+    > span {
+      font-size: 1.25rem;
+    }
+  }
+  > .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > li {
+      font-size: 3.25rem;
+      color: #fff;
+      font-weight: 600;
+      @include fontEn;
+
+      &:after {
+        content: '|';
+        padding: 0 4rem;
+      }
+
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

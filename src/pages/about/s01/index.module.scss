@@ -1,0 +1,18 @@
+@import '../../../common.scss';
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-image: url('../../../asset/images/about/s01_background.jpg');
+  @include backgroundCenter;
+
+  > .title {
+    font-size: 18.125rem;
+    line-height: 1.4;
+    color: #fff;
+    @include fontEn;
+  }
+}

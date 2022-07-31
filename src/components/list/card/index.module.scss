@@ -1,0 +1,79 @@
+@import '../../../common.scss';
+
+$red: #ec363e;
+$pink: #fd6ca5;
+$green: #18a55b;
+$blue: #2851e8;
+
+.card {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3.125rem;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+
+  &.BLEU {
+    background-color: $blue;
+  }
+  &.VERT {
+    background-color: $green;
+  }
+  &.ROUGE {
+    background-color: $red;
+  }
+  &.ROSE {
+    background-color: $pink;
+  }
+
+  > .desc {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin-bottom: 2.375rem;
+    @include fontEn;
+  }
+
+  > .title {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2.875rem;
+  }
+  > img {
+    width: 100%;
+    margin-bottom: 4.125rem;
+    max-width: 13.125rem;
+    position: relative;
+    z-index: 10;
+  }
+  > .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 16.25rem;
+    height: 5rem;
+    color: #fff;
+    @include fontEn;
+  }
+  > .backgroundTitle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16.25rem;
+    font-weight: 600;
+    z-index: 0;
+    color: #fff;
+    opacity: 0.2;
+    @include fontEn;
+  }
+}
