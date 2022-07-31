@@ -1,19 +1,26 @@
 @import '../../../common.scss';
 
 .container {
-  background-color: #f8f8f8;
   overflow: hidden;
   width: 100vw;
 
   > .autoSlider {
     display: flex;
     align-items: center;
+    padding: 2rem 0;
     width: 200vw;
+
+    &.white {
+      li {
+        color: #fff;
+      }
+    }
+
     > li {
       width: 100vw;
 
       &:first-of-type {
-        animation: moveLeftAnimation 10s infinite linear;
+        animation: moveLeftAnimation 12.5s infinite linear;
       }
 
       @keyframes moveLeftAnimation {
@@ -26,14 +33,13 @@
       }
 
       > ul {
-        padding: 2rem 0;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
 
         > li {
           font-size: 1.75rem;
-          font-weight: 500;
+          font-weight: 600;
           color: #000;
           white-space: nowrap;
           @include fontEn;

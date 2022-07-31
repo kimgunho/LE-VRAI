@@ -1,0 +1,10 @@
+@import '../../../common.scss';
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../../asset/images/about/s07_background.jpg');
+  @include backgroundCenter;
+}

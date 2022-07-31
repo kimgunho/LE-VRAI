@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 
-import logo from '../../asset/images/global/logo.png';
+import logo from '../../asset/images/global/logo_white.png';
 
 import styles from './index.module.scss';
 const cx = classNames.bind(styles);

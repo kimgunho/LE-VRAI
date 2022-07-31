@@ -1,0 +1,56 @@
+@import '../../../common.scss';
+
+.wrapper {
+  > .background {
+    width: 100vw;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../../asset/images/about/s04_background.jpg');
+    @include backgroundCenter;
+
+    > .title {
+      color: #fff;
+      font-weight: 600;
+      font-size: 13.75rem;
+      @include fontEn;
+    }
+  }
+
+  > .container {
+    padding: 7.5rem 0;
+    box-sizing: border-box;
+    background-color: #fc9034;
+    text-align: center;
+
+    > .subTitle {
+      color: #fff;
+      font-size: 2rem;
+      line-height: 2.5;
+    }
+    > .title {
+      font-size: 7.5rem;
+      background-color: #fd6e1a;
+      color: #fff;
+      width: fit-content;
+      margin: 0 auto 2.5rem;
+      @include fontEn;
+    }
+    > .desc {
+      font-size: 2rem;
+      color: #fff;
+      line-height: 1.6;
+      margin-bottom: 6.25rem;
+    }
+    > .logo {
+      width: 100%;
+      max-width: 10.625rem;
+      margin: 0 auto 2.5rem;
+    }
+    > .note {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+  }
+}
