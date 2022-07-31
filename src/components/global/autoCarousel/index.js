@@ -3,10 +3,10 @@ import classNames from 'classnames/bind';
 import styles from './index.module.scss';
 const cx = classNames.bind(styles);
 
-const AutoCarousel = () => {
+const AutoCarousel = ({ isColorBlack = true }) => {
   return (
     <div className={cx('container')}>
-      <ul className={cx('autoSlider')}>
+      <ul className={cx(['autoSlider', !isColorBlack && 'white'])}>
         <li>
           <ul>
             {Array.from(Array(3).keys()).map((_, index) => (

@@ -1,0 +1,91 @@
+@import '../../../common.scss';
+
+.wrapper {
+  > .background {
+    width: 100vw;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../../asset/images/about/s05_background.jpg');
+    @include backgroundCenter;
+
+    > .title {
+      color: #fff;
+      font-weight: 600;
+      font-size: 13.75rem;
+      @include fontEn;
+    }
+  }
+
+  > .container {
+    background-color: #2851e8;
+    padding: 7.5rem 0;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > .subTitle {
+      color: #fff;
+      font-size: 2rem;
+      line-height: 2.5;
+    }
+    > .title {
+      font-size: 7.5rem;
+      background-color: #143cd2;
+      color: #fff;
+      width: fit-content;
+      margin: 0 auto 2.5rem;
+      @include fontEn;
+    }
+    > .desc {
+      font-size: 2rem;
+      color: #fff;
+      line-height: 1.6;
+      margin-bottom: 5rem;
+    }
+
+    > .simpleList {
+      margin-bottom: 5rem;
+      width: 100%;
+      max-width: 46.875rem;
+
+      > li {
+        margin-bottom: 2.375rem;
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        > h5 {
+          font-size: 1.875rem;
+          @include fontEn;
+        }
+        > span {
+          &::after {
+            content: '';
+            width: 2px;
+            height: 1.875rem;
+            background-color: #fff;
+            display: block;
+          }
+        }
+        > p {
+          font-size: 1.5rem;
+          color: #fff;
+        }
+      }
+    }
+
+    > .note {
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+}
