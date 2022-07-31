@@ -1,7 +1,6 @@
 @import '../../../common.scss';
 
 .container {
-  background-color: #f8f8f8;
   overflow: hidden;
   width: 100vw;
 
@@ -10,6 +9,12 @@
     align-items: center;
     padding: 2rem 0;
     width: 200vw;
+
+    &.white {
+      li {
+        color: #fff;
+      }
+    }
 
     > li {
       width: 100vw;
