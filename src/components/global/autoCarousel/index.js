@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import classNames from 'classnames/bind';
 
 import styles from './index.module.scss';
@@ -10,20 +11,20 @@ const AutoCarousel = ({ isColorBlack = true }) => {
         <li>
           <ul>
             {Array.from(Array(3).keys()).map((_, index) => (
-              <>
-                <li key={index}>CLEAN &amp; NATURAL TREATMENT</li>
-                <li key={`*_${index}`}>*</li>
-              </>
+              <Fragment key={`firstLine${index}`}>
+                <li>CLEAN &amp; NATURAL TREATMENT</li>
+                <li>*</li>
+              </Fragment>
             ))}
           </ul>
         </li>
         <li>
           <ul>
             {Array.from(Array(3).keys()).map((_, index) => (
-              <>
-                <li key={index}>CLEAN &amp; NATURAL TREATMENT</li>
-                <li key={`*_${index}`}>*</li>
-              </>
+              <Fragment key={`secondLine${index}`}>
+                <li>CLEAN &amp; NATURAL TREATMENT</li>
+                <li>*</li>
+              </Fragment>
             ))}
           </ul>
         </li>

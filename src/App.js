@@ -6,6 +6,7 @@ import Footer from './components/global/footer';
 import Home from './pages/home';
 import About from './pages/about';
 import Intro from './pages/intro';
+import ScrollTop from './components/global/scrollTop';
 
 const App = () => {
   const isWelcome = sessionStorage.getItem('intro');
@@ -32,6 +33,7 @@ const App = () => {
         )}
       </Routes>
       {isWelcome && <Footer />}
+      <ScrollTop />
     </BrowserRouter>
   );
 };
