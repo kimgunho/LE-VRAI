@@ -54,7 +54,6 @@ const S04 = () => {
           start: 'top top',
           end: '+=800%',
           pinSpacing: true,
-          snap: [0, 0.33333, 0.66666, 1],
         },
       })
       .to(flexRef.current, { left: '-100%', backgroundColor: '#FF6CA5' })
