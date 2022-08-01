@@ -1,1 +1,13 @@
 @import '../../../common.scss';
+
+$red: #ec363e;
+$pink: #fc51a8;
+$green: #18a55b;
+$blue: #2851e8;
+
+.wrapper {
+  background-color: #fff;
+  width: 50vw;
+  padding: 7.5rem;
+  box-sizing: border-box;
+}
