@@ -5,9 +5,9 @@ import styles from './index.module.scss';
 
 const cx = classNames.bind(styles);
 
-const LinkButton = ({ title, link }) => {
+const LinkButton = ({ title, link, isWhite = true }) => {
   return (
-    <Link to={link} className={cx('button')}>
+    <Link to={link} className={cx('button', `${isWhite}`)}>
       {title}
     </Link>
   );

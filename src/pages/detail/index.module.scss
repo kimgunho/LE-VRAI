@@ -1,16 +1,16 @@
 @import '../../common.scss';
 
 .wrapper {
-  display: flex;
-  align-items: flex-start;
+  > .flexBox {
+    display: flex;
+    align-items: flex-start;
 
-  > .productContainer {
-    width: 50vw;
-  }
+    > .productContainer {
+      width: 50vw;
+    }
 
-  > .detailInfo {
-    width: 50vw;
-    min-height: 2000px;
-    background-color: aqua;
+    > .detailBody {
+      width: 50vw;
+    }
   }
 }

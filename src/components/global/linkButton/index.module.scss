@@ -1,20 +1,46 @@
 @import '../../../common.scss';
 
 .button {
-  color: #fff;
   font-size: 1.5rem;
   font-weight: 300;
   border-radius: 50%;
   padding: 1.625rem 3.625rem;
-  border: 1px solid #fff;
   white-space: nowrap;
   transition: all 0.2s ease-in;
+  border: 1px solid;
   @include fontEn;
 
-  @include pc_hover {
-    &:hover {
-      background-color: #fff;
-      color: #000;
+  &.true {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+
+    @include pc_hover {
+      &:hover {
+        background-color: #000;
+        color: #fff;
+        border-color: #fff;
+      }
     }
+  }
+
+  &.false {
+    color: #fff;
+    background-color: #000;
+    border-color: #fff;
+
+    @include pc_hover {
+      &:hover {
+        background-color: #fff;
+        color: #000;
+        border-color: #000;
+      }
+    }
+  }
+
+  &.transparent {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
   }
 }

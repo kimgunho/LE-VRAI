@@ -1,10 +1,5 @@
 @import '../../../common.scss';
 
-$red: #ff5c62;
-$pink: #ff96bf;
-$green: #20bf76;
-$blue: #496ef8;
-
 .container {
   display: flex;
   align-items: center;
@@ -19,16 +14,16 @@ $blue: #496ef8;
     @include fontEn;
 
     &.red {
-      color: $red;
+      color: $normalRed;
     }
     &.pink {
-      color: $pink;
+      color: $normalPink;
     }
     &.green {
-      color: $green;
+      color: $normalGreen;
     }
     &.blue {
-      color: $blue;
+      color: $normalBlue;
     }
   }
 
@@ -43,16 +38,16 @@ $blue: #496ef8;
       @include fontEn;
 
       &.red {
-        color: $red;
+        color: $normalRed;
       }
       &.pink {
-        color: $pink;
+        color: $normalPink;
       }
       &.green {
-        color: $green;
+        color: $normalGreen;
       }
       &.blue {
-        color: $blue;
+        color: $normalBlue;
       }
     }
 

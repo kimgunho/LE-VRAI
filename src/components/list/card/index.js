@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
+
+import LinkButton from '../../global/linkButton';
 
 import styles from './index.module.scss';
 
@@ -22,9 +23,7 @@ const ProductCard = ({ dataObj }) => {
       <h3 className={cx('title')}>{dataObj.name}</h3>
       <img src={isEnter ? dataObj.openImage : dataObj.unOpenImage} alt={dataObj.title} draggable={false} />
       <p className={cx('backgroundTitle')}>{dataObj.title}</p>
-      <Link className={cx('link')} to={dataObj.link}>
-        SHOP NOW
-      </Link>
+      <LinkButton link={dataObj.link} isWhite={'transparent'} title={'SHOP NOW'} />
     </li>
   );
 };
