@@ -1,10 +1,5 @@
 @import '../../../common.scss';
 
-$red: #ec363e;
-$pink: #fd6ca5;
-$green: #18a55b;
-$blue: #2851e8;
-
 .card {
   width: 50%;
   display: flex;
@@ -50,19 +45,6 @@ $blue: #2851e8;
     max-width: 13.125rem;
     position: relative;
     z-index: 10;
-  }
-  > .link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    font-weight: 400;
-    width: 16.25rem;
-    height: 5rem;
-    color: #fff;
-    @include fontEn;
   }
   > .backgroundTitle {
     position: absolute;

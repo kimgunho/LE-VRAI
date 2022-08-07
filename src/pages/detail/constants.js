@@ -1,4 +1,4 @@
-export const productInfoArr = {
+export const productInfoObj = {
   BLEU: {
     mainColor: 'blue',
     name: 'BLEU',

@@ -1,17 +1,26 @@
+import { useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 
 import styles from './index.module.scss';
 
 const cx = classNames.bind(styles);
 
-const S06 = () => {
+const S06 = ({ setOffsetTop }) => {
+  const contactRef = useRef();
+
+  useEffect(() => {
+    if (contactRef.current) {
+      setOffsetTop(contactRef.current.offsetTop);
+    }
+  }, []);
+
   const onSubmit = async (e) => {
     e.preventDefault();
     console.log('POST');
   };
 
   return (
-    <section className={cx('wrapper')}>
+    <section className={cx('wrapper')} ref={contactRef}>
       <h3 className={cx('title')}>GET IN TOUCH!</h3>
       <article className={cx('container')}>
         <div className={cx('contactBox')}>
