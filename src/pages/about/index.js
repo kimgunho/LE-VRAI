@@ -14,9 +14,7 @@ const About = () => {
   const { hash } = useLocation();
 
   useEffect(() => {
-    if (hash === '#contact') {
-      window.scrollTo(0, offsetTop - 100);
-    }
+    hash === '#contact' ? window.scrollTo(0, offsetTop - 100) : window.scrollTo(0, 0);
   }, [hash, offsetTop]);
 
   return (

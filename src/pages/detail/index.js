@@ -37,7 +37,7 @@ const Detail = () => {
         pinSpacing: false,
       },
     });
-  }, [title]);
+  }, [title, productContainerRef.current]);
 
   return (
     <main className={cx('wrapper')}>
