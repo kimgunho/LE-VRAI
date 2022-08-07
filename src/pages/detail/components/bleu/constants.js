@@ -6,6 +6,30 @@ import point5ImgSrc from '../../../../asset/images/detail/bleu/bleu_point_img05.
 import point6ImgSrc from '../../../../asset/images/detail/bleu/bleu_point_img06.png';
 import point7ImgSrc from '../../../../asset/images/detail/bleu/bleu_point_img07.png';
 import point8ImgSrc from '../../../../asset/images/detail/bleu/bleu_point_img08.png';
+import point2BannerImg from '../../../../asset/images/detail/bleu/point2_img.jpg';
+import point3VeganImg01 from '../../../../asset/images/detail/bleu/point3_vegan_img01.png';
+import point3VeganImg02 from '../../../../asset/images/detail/bleu/point3_vegan_img02.png';
+import point3VeganImg03 from '../../../../asset/images/detail/bleu/point3_vegan_img03.png';
+import veganLogo from '../../../../asset/images/detail/bleu/eve_vegan_logo.png';
+
+export const veganArr = [
+  {
+    icon: point3VeganImg01,
+    title: '원료사용',
+  },
+  {
+    icon: point3VeganImg02,
+    title: '원료 패키지',
+  },
+  {
+    icon: point3VeganImg03,
+    title: '실험제조 과정',
+  },
+];
+
+export const getOtherImages = () => {
+  return { point2BannerImg, veganLogo };
+};
 
 export const point1Arr = [
   {

@@ -20,8 +20,8 @@ import styles from './index.module.scss';
 const cx = classNames.bind(styles);
 
 const Detail = () => {
-  const wrapperRef = useRef();
-  const productContainerRed = useRef();
+  const pinRef = useRef();
+  const productContainerRef = useRef();
 
   const { title } = useParams();
   const productObj = productInfoObj[title];
@@ -29,29 +29,31 @@ const Detail = () => {
   useEffect(() => {
     gsap.timeline({
       scrollTrigger: {
-        trigger: wrapperRef.current,
+        trigger: pinRef.current,
         scrub: true,
-        pin: productContainerRed.current,
+        pin: productContainerRef.current,
         start: 'top top',
         end: 'bottom bottom',
+        pinSpacing: false,
       },
     });
-  }, []);
+  }, [title]);
 
   return (
-    <main className={cx('wrapper')} ref={wrapperRef}>
-      <div className={cx('flexBox')}>
-        <div className={cx('productContainer')} ref={productContainerRed}>
+    <main className={cx('wrapper')}>
+      <div className={cx('flexBox')} ref={pinRef}>
+        <div className={cx('productContainer')} ref={productContainerRef}>
           <BasicInfo dataObj={productObj} />
         </div>
-        <article className={cx('detailBody')}>
-          {/* <DetailTop currentTitle={title} data={productArr} /> */}
+        <article className={cx(['detailBody', title])}>
+          <DetailTop currentTitle={title} data={productArr} />
           {title === 'BLEU' && <BLEU />}
           {title === 'VERT' && <VERT />}
           {title === 'ROUGE' && <ROUGE />}
           {title === 'ROSE' && <ROSE />}
         </article>
       </div>
+
       <div className={cx('autoSliderBox')}>
         <AutoCarousel />
       </div>

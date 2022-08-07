@@ -3,7 +3,6 @@
 .wrapper {
   > .flexBox {
     display: flex;
-    align-items: flex-start;
 
     > .productContainer {
       width: 50vw;
@@ -11,6 +10,19 @@
 
     > .detailBody {
       width: 50vw;
+
+      &.BLEU {
+        background-color: $softBlueBg;
+      }
+      &.VERT {
+        background-color: $softGreenBg;
+      }
+      &.ROUGE {
+        background-color: $softRedBg;
+      }
+      &.ROSE {
+        background-color: $softPinkBg;
+      }
     }
   }
 }
