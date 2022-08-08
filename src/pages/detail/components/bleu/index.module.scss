@@ -1,0 +1,435 @@
+@import '../../../../common.scss';
+
+.wrapper {
+  > .paddingBox {
+    padding: 4.25rem 5rem;
+    box-sizing: border-box;
+
+    > .mainDesc {
+      font-size: 2.25rem;
+      font-weight: 400;
+      margin-bottom: 3.75rem;
+      line-height: 1.6;
+
+      > span {
+        font-weight: 500;
+      }
+    }
+
+    > .list {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8.75rem;
+
+      > li {
+        width: 49%;
+        background-color: #fff;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        position: relative;
+
+        > .count {
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-color: $deepBlue;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 2rem;
+          height: 2rem;
+        }
+
+        > .title {
+          font-size: 2.625rem;
+          color: $deepBlue;
+          font-weight: 600;
+          margin-bottom: 1rem;
+          line-height: 1.2;
+          @include fontEn;
+        }
+        > .desc {
+          font-size: 1.375rem;
+          font-weight: 400;
+          color: #000;
+        }
+      }
+    }
+
+    > .point {
+      width: fit-content;
+      height: 2.375rem;
+      background-color: $deepBlue;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0.5rem;
+      font-weight: 600;
+      margin-bottom: 1.875rem;
+      @include fontEn;
+    }
+
+    > .title {
+      font-size: 3.5rem;
+      color: #000;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 2.5rem;
+      @include fontEn;
+    }
+
+    > .desc {
+      font-size: 1.625rem;
+      color: #000;
+      line-height: 1.8;
+      margin-bottom: 5rem;
+      word-break: keep-all;
+    }
+
+    > .pointArr {
+      margin-bottom: 3.75rem;
+      > li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.5rem;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        > img {
+          width: 9.375rem;
+          height: 9.375rem;
+          border-radius: 50%;
+        }
+        > .info {
+          margin-left: 1rem;
+
+          > .title {
+            font-size: 1.5rem;
+            color: #000;
+            background-color: $softBlue;
+            font-weight: 500;
+            width: fit-content;
+            padding: 0.3rem;
+            margin-bottom: 1.25rem;
+            @include fontEn;
+          }
+          > .desc {
+            font-size: 1.375rem;
+            color: #000;
+            line-height: 1.8;
+            font-weight: 400;
+            word-break: keep-all;
+          }
+        }
+      }
+    }
+    > .checkDesc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #dedede;
+      color: #000;
+      border-radius: 2rem;
+      box-sizing: border-box;
+      width: 18.75rem;
+      height: 3.75rem;
+      font-size: 1.375rem;
+      margin: 0 auto 8.75rem;
+
+      > .icon {
+        margin-right: 0.5rem;
+        line-height: 0;
+      }
+    }
+    > .bannerBox {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      margin-bottom: 8.75rem;
+      background-color: #fff;
+      border-radius: 1rem;
+
+      > img {
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 21.25rem;
+      }
+      > .info {
+        margin-left: 1rem;
+
+        > .title {
+          font-size: 1.375rem;
+          color: #000;
+          font-weight: 500;
+          margin-bottom: 1.625rem;
+        }
+        > .desc {
+          line-height: 1.6;
+          font-size: 1.25rem;
+          font-weight: 400;
+          color: #000;
+        }
+      }
+    }
+    > .veganBox {
+      background-color: #fff;
+      padding: 1rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      margin-bottom: 8.75rem;
+
+      > .veganCampaign {
+        width: 100%;
+        background-image: url('../../../../asset/images/detail/bleu/point3_background_img.jpg');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+        margin-bottom: 2.5rem;
+        @include backgroundCenter;
+
+        > li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 33.33334%;
+          padding: 2.375rem 0;
+          position: relative;
+
+          &:last-of-type {
+            &::after {
+              display: none;
+            }
+          }
+
+          &::after {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80%;
+            background-color: #fff;
+            width: 1px;
+            content: '';
+          }
+
+          > img {
+            width: 100%;
+            max-width: 5rem;
+            margin-bottom: 1.25rem;
+          }
+          > .desc {
+            color: #fff;
+            font-size: 1.375rem;
+            text-align: center;
+            font-weight: 400;
+            line-height: 1.6;
+          }
+        }
+      }
+      > .desc {
+        width: 100%;
+        font-size: 1.25rem;
+        line-height: 1.8;
+        text-align: center;
+        word-break: keep-all;
+        font-weight: 400;
+        margin-bottom: 2.5rem;
+      }
+      > .logo {
+        width: 100%;
+        max-width: 16.25rem;
+        margin-bottom: 3.75rem;
+      }
+    }
+
+    > .productArr {
+      margin-bottom: 5rem;
+      > li {
+        background-color: #fff;
+        border-radius: 1rem;
+        padding: 1rem;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+
+        > .background {
+          background-color: #f4f4f4;
+          border-radius: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 13.75rem;
+          height: 13.75rem;
+
+          > img {
+            width: 100%;
+            max-width: 3.75rem;
+          }
+        }
+        > .info {
+          margin-left: 1rem;
+          > .name {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+
+            &.BLEU {
+              color: $blue;
+
+              > .title {
+                color: $softBlue;
+              }
+            }
+            &.VERT {
+              color: $green;
+
+              > .title {
+                color: $softGreen;
+              }
+            }
+            &.ROUGE {
+              color: $red;
+
+              > .title {
+                color: $softRed;
+              }
+            }
+            &.ROSE {
+              color: $pink;
+
+              > .title {
+                color: $softPink;
+              }
+            }
+
+            > .title {
+              font-size: 1.5rem;
+              @include fontEn;
+            }
+          }
+          > .desc {
+            font-size: 1.375rem;
+            color: #000;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+          }
+          > .subDesc {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 2.375rem;
+          }
+          > .hash {
+            background-color: #f4f4f4;
+            padding: 0.375rem 0.75rem;
+            display: flex;
+            border-radius: 0.5rem;
+            align-items: center;
+
+            > span {
+              color: #000;
+              font-size: 1rem;
+              font-weight: 400;
+              margin-right: 0.5rem;
+
+              &:last-of-type {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    > .productInfo {
+      > .title {
+        font-size: 1.625rem;
+        color: #000;
+        font-weight: 600;
+        border-bottom: 1px solid #000;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+      }
+      > .info {
+        margin-bottom: 3.75rem;
+        > li {
+          display: flex;
+          align-items: center;
+          line-height: 2.5;
+
+          > .title {
+            width: 40%;
+            font-size: 1.375rem;
+            color: #000;
+            font-weight: 500;
+          }
+          > .desc {
+            width: 60%;
+            font-size: 1.375rem;
+            color: #000;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  > .point4Box {
+    > .background {
+      background-image: url('../../../../asset/images/detail/bleu/point4_background.jpg');
+      height: 56.25rem;
+      @include backgroundCenter;
+    }
+    > .info {
+      background-color: $deepBlue;
+      padding: 3.75rem 5rem;
+
+      > li {
+        display: flex;
+        align-items: flex-start;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 1.25rem 0;
+
+        &:last-of-type {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        > .title {
+          color: #fff;
+          font-size: 1.5rem;
+          font-weight: 600;
+          width: 30%;
+          @include fontEn;
+        }
+
+        > .desc {
+          color: #fff;
+          width: 70%;
+          font-weight: 400;
+          line-height: 1.6;
+          word-break: keep-all;
+          &.large {
+            font-size: 1.25rem;
+          }
+          &.small {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  > .point5Background {
+    background-image: url('../../../../asset/images/detail/bleu/point5_background.jpg');
+    height: 26.25rem;
+    @include backgroundCenter;
+  }
+}

@@ -1,0 +1,170 @@
+@import '../../../common.scss';
+
+.wrapper {
+  background-color: #fff;
+  width: 50vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &.blue {
+    .colorPoint {
+      color: $blue;
+    }
+    .deepColorPoint {
+      background-color: $deepBlue;
+    }
+    .softColorPoint {
+      background-color: $softBlue;
+    }
+  }
+  &.green {
+    .colorPoint {
+      color: $green;
+    }
+    .deepColorPoint {
+      background-color: $deepGreen;
+    }
+    .softColorPoint {
+      background-color: $softGreen;
+    }
+  }
+  &.red {
+    .colorPoint {
+      color: $red;
+    }
+    .deepColorPoint {
+      background-color: $deepRed;
+    }
+    .softColorPoint {
+      background-color: $softRed;
+    }
+  }
+  &.pink {
+    .colorPoint {
+      color: $pink;
+    }
+    .deepColorPoint {
+      background-color: $deepPink;
+    }
+    .softColorPoint {
+      background-color: $softPink;
+    }
+  }
+
+  > .paddingBox {
+    padding: 7rem 7rem 0rem 7rem;
+    box-sizing: border-box;
+
+    > .subDesc {
+      font-size: 1.75rem;
+      line-height: 1.6;
+      font-weight: 400;
+      @include fontEn;
+    }
+
+    > .title {
+      font-size: 6.25rem;
+      font-weight: 600;
+      @include fontEn;
+
+      > span {
+        font-size: 2.375rem;
+      }
+    }
+    > .desc {
+      margin: 1.375rem 0 2.25rem 0;
+      font-size: 1.375rem;
+      line-height: 1.6;
+      word-break: keep-all;
+
+      > span {
+        font-weight: 500;
+      }
+    }
+    > .list {
+      > li {
+        padding: 1rem 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+        &:last-of-type {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        > .desc {
+          font-size: 1rem;
+          font-weight: 400;
+          @include fontEn;
+
+          > strong {
+            font-weight: 600;
+          }
+          > span {
+            font-weight: 500;
+            padding: 0 1rem;
+          }
+        }
+      }
+    }
+    > .flexBox {
+      padding: 3.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      > .FAQButton {
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  > .bottom {
+    width: 100%;
+
+    > .listBox {
+      padding: 1.75rem 7rem;
+      width: 100%;
+
+      > ul {
+        > li {
+          margin-bottom: 1.25rem;
+          font-size: 1.625rem;
+          font-weight: 600;
+          color: #000;
+          display: flex;
+          align-items: center;
+          @include fontEn;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          > .deepColorPoint {
+            width: 2rem;
+            height: 2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+    > .note {
+      width: 100%;
+      padding: 0.5rem 7rem;
+      font-size: 0.875rem;
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}

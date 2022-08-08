@@ -26,7 +26,7 @@ const Footer = () => {
           </li>
         </ul>
 
-        <LinkButton title={'CONTACT US'} link="/" />
+        <LinkButton title={'CONTACT US'} link="/about#contact" isWhite={false} />
       </div>
       <p className={cx('copyright')}>
         <img src={logo} alt="LE VRAI" />© 2022

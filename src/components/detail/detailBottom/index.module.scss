@@ -1,0 +1,65 @@
+@import '../../../common.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > li {
+    position: relative;
+    width: 33.3333334%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 2.5rem;
+    box-sizing: border-box;
+
+    &.BLEU {
+      background-color: $blue;
+    }
+    &.VERT {
+      background-color: $green;
+    }
+    &.ROUGE {
+      background-color: $red;
+    }
+    &.ROSE {
+      background-color: $pink;
+    }
+
+    > .subDesc {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 400;
+      text-decoration: underline;
+      margin-bottom: 1.625rem;
+      @include fontEn;
+    }
+    > .title {
+      font-size: 1.6875rem;
+      font-weight: 500;
+      margin-bottom: 2.5rem;
+      color: #fff;
+    }
+    > img {
+      width: 100%;
+      max-width: 7.5rem;
+      position: relative;
+      z-index: 10;
+    }
+    > .backgroundText {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 10.625rem;
+      font-weight: 600;
+      z-index: 0;
+      color: #fff;
+      opacity: 0.2;
+      @include fontEn;
+    }
+  }
+}

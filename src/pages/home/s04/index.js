@@ -4,41 +4,11 @@ import gsap from 'gsap';
 
 import ProductCard from '../../../components/home/productCard';
 
+import { productArr } from './constant';
 import styles from './index.module.scss';
 
 const cx = classNames.bind(styles);
 gsap.defaults({ ease: 'none', duration: 10 });
-
-const productArr = [
-  {
-    title: 'ROUGE',
-    descTitle: '코코 루즈',
-    desc: '수분감 가득한 페이스앤립용 비건 컬러 멀티밤',
-    link: '/',
-    color: 'red',
-  },
-  {
-    title: 'ROSE',
-    descTitle: '코코 루즈',
-    desc: '수분감 가득한 페이스앤립용 비건 컬러 멀티밤',
-    link: '/',
-    color: 'pink',
-  },
-  {
-    title: 'VERT',
-    descTitle: '로로 베르',
-    desc: '보습과 진정에 효과를 보이는 페이스앤바디용 비건 케어 멀티밤',
-    link: '/',
-    color: 'green',
-  },
-  {
-    title: 'BLEU',
-    descTitle: '로로 블루',
-    desc: '보습과 진정에 효과를 보이는 페이스앤바디용 비건 케어 멀티밤',
-    link: '/',
-    color: 'blue',
-  },
-];
 
 const S04 = () => {
   const wrapperRef = useRef();
@@ -54,7 +24,6 @@ const S04 = () => {
           start: 'top top',
           end: '+=800%',
           pinSpacing: true,
-          snap: [0, 0.33333, 0.66666, 1],
         },
       })
       .to(flexRef.current, { left: '-100%', backgroundColor: '#FF6CA5' })
