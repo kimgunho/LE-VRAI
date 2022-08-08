@@ -20,17 +20,15 @@
   &.red {
     background-color: $red;
   }
-
   > .logo {
-    width: 11.25rem;
+    width: 10rem;
 
     > img {
       width: 100%;
     }
   }
-
   > .cover {
-    width: 11.25rem;
+    width: 10rem;
     height: 5rem;
     opacity: 0.8;
     position: absolute;
@@ -53,13 +51,13 @@
       background-color: $red;
     }
   }
+}
 
-  @keyframes moveRightAnimation {
-    0% {
-      left: 50%;
-    }
-    100% {
-      left: calc(50% + 11.25rem);
-    }
+@keyframes moveRightAnimation {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: calc(50% + 10rem);
   }
 }
