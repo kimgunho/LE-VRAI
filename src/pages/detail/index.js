@@ -1,6 +1,4 @@
-import { useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
-import gsap from 'gsap';
 import { useParams } from 'react-router-dom';
 
 import AutoCarousel from '../../components/global/autoCarousel';
@@ -19,29 +17,13 @@ import styles from './index.module.scss';
 const cx = classNames.bind(styles);
 
 const Detail = () => {
-  const pinRef = useRef();
-  const productContainerRef = useRef();
-
   const { title } = useParams();
   const productObj = productInfoObj[title];
 
-  useEffect(() => {
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: pinRef.current,
-        scrub: true,
-        pin: productContainerRef.current,
-        start: 'top top',
-        end: 'bottom bottom',
-        pinSpacing: false,
-      },
-    });
-  }, [title, productContainerRef.current]);
-
   return (
     <main className={cx('wrapper')}>
-      <div className={cx('flexBox')} ref={pinRef}>
-        <div className={cx('productContainer')} ref={productContainerRef}>
+      <div className={cx('flexBox')}>
+        <div className={cx('productContainer')}>
           <BasicInfo dataObj={productObj} />
         </div>
         <article className={cx(['detailBody', title])}>
@@ -53,10 +35,12 @@ const Detail = () => {
         </article>
       </div>
 
-      <div className={cx('autoSliderBox')}>
-        <AutoCarousel />
+      <div className={cx('bottomBox')}>
+        <div className={cx('autoSliderBox')}>
+          <AutoCarousel />
+        </div>
+        <DetailBottom currentTitle={title} data={productArr} />
       </div>
-      <DetailBottom currentTitle={title} data={productArr} />
     </main>
   );
 };
