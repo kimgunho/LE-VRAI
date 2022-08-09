@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
@@ -12,38 +12,77 @@ import styles from './index.module.scss';
 const cx = classNames.bind(styles);
 
 const Header = () => {
-  const [isScroll, setIsScroll] = useState(false);
+  const [scrollY, setScrollY] = useState(window.scrollY);
+  const [isScrollUp, setIsScrollUp] = useState(false);
   const { pathname } = useLocation();
 
-  const changeIsScroll = () => {
-    window.scrollY !== 0 ? setIsScroll(true) : setIsScroll(false);
-  };
+  const ITEM_PAGE_ARR = ['/product/detail/BLEU', '/product/detail/VERT', '/product/detail/ROUGE', '/product/detail/ROSE'];
+
+  const handleNavigation = useCallback(
+    (event) => {
+      const window = event.currentTarget;
+      if (scrollY > window.scrollY) {
+        setIsScrollUp(true);
+      } else if (scrollY < window.scrollY) {
+        setIsScrollUp(false);
+      }
+      setScrollY(window.scrollY);
+    },
+    [scrollY],
+  );
 
   useEffect(() => {
-    window.addEventListener('scroll', changeIsScroll);
+    window.addEventListener('scroll', handleNavigation);
 
     return () => {
-      window.removeEventListener('scroll', changeIsScroll);
+      window.removeEventListener('scroll', handleNavigation);
     };
-  }, []);
+  }, [handleNavigation]);
+
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  const logoSrcCreator = () => {
+    for (const page of ITEM_PAGE_ARR) {
+      if (page === pathname) {
+        return logoBlackSrc;
+      }
+    }
+
+    if (isScrollUp) {
+      return logoBlackSrc;
+    } else {
+      return logoWhiteSrc;
+    }
+  };
+
+  const setIsBlackColor = () => {
+    for (const page of ITEM_PAGE_ARR) {
+      if (page === pathname) {
+        return 'black';
+      }
+    }
+    return 'white';
+  };
 
   return (
-    <header className={cx(['header', isScroll && 'active'])}>
+    <header className={cx(['header', isScrollUp && 'active'])}>
       <ul className={cx('gnb')}>
-        <li>
-          <h1>
+        <li className={cx(setIsBlackColor())}>
+          <h1 onClick={scrollTop}>
             <Link to="/">
-              <img src={isScroll ? logoBlackSrc : logoWhiteSrc} alt={getPageH1Title(pathname)} />
+              <img src={logoSrcCreator()} alt={getPageH1Title(pathname)} />
             </Link>
           </h1>
         </li>
-        <li>
+        <li className={cx(setIsBlackColor())}>
           <Link to="/about">ABOUT</Link>
         </li>
-        <li>
+        <li className={cx(setIsBlackColor())}>
           <Link to="/product">PRODUCT</Link>
         </li>
-        <li>
+        <li className={cx(setIsBlackColor())}>
           <Link to="/about#contact">CONTACT</Link>
         </li>
       </ul>

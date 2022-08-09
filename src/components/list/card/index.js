@@ -23,7 +23,7 @@ const ProductCard = ({ dataObj }) => {
       <h3 className={cx('title')}>{dataObj.name}</h3>
       <img src={isEnter ? dataObj.openImage : dataObj.unOpenImage} alt={dataObj.title} draggable={false} />
       <p className={cx('backgroundTitle')}>{dataObj.title}</p>
-      <LinkButton link={dataObj.link} isWhite={'transparent'} title={'SHOP NOW'} />
+      <LinkButton link={dataObj.link} isWhite={true} title={'SHOP NOW'} color={dataObj.title} />
     </li>
   );
 };

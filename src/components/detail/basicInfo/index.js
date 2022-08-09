@@ -38,7 +38,7 @@ const BasicInfo = ({ dataObj }) => {
             ))}
           </ul>
           <div className={cx('flexBox')}>
-            <LinkButton title={'SHOP NOW'} link={dataObj.link} />
+            <LinkButton title={'SHOP NOW'} link={dataObj.link} isWhite={false} />
             <button type="button" className={cx(['FAQButton', 'colorPoint'])} onClick={handleShowModal}>
               FAQS <FiArrowUpRight />
             </button>

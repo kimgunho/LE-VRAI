@@ -1,20 +1,20 @@
 import classNames from 'classnames/bind';
 
-import logo from '../../asset/images/global/logo_white.png';
-
 import styles from './index.module.scss';
+
 const cx = classNames.bind(styles);
 
+const COLORS = ['pink', 'blue', 'green', 'red'];
+
 const Intro = () => {
-  const colors = ['pink', 'blue', 'green', 'red'];
-  const randomIndex = Math.floor(Math.random() * (colors.length - 0) + 0);
+  const randomIndex = Math.floor(Math.random() * COLORS.length);
 
   return (
-    <main className={cx('wrapper', `${colors[randomIndex]}`)}>
+    <main className={cx('wrapper', `${COLORS[randomIndex]}`)}>
       <h1 className={cx('logo')}>
-        <img src={logo} alt="LE VRAI" draggable={false} />
+        <img src={require('../../asset/images/global/logo_white.png')} alt="LE VRAI" draggable={false} />
       </h1>
-      <div className={cx('cover', `${colors[randomIndex]}`)} />
+      <div className={cx('cover', `${COLORS[randomIndex]}`)} />
     </main>
   );
 };
