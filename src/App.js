@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/global/header';
 import Footer from './components/global/footer';
@@ -8,24 +8,27 @@ import About from './pages/about';
 import Intro from './pages/intro';
 import List from './pages/list';
 import Detail from './pages/detail';
-import ScrollTop from './components/global/scrollTop';
+import ScrollTop from './components/global/ScrollTop';
 
 const App = () => {
-  const isWelcome = sessionStorage.getItem('intro');
+  const isVisit = sessionStorage.getItem('intro');
 
   useEffect(() => {
-    !isWelcome &&
-      setTimeout(() => {
-        sessionStorage.setItem('intro', true);
-        location.reload();
-      }, 3000);
+    if (isVisit) {
+      return;
+    }
+
+    setTimeout(() => {
+      sessionStorage.setItem('intro', true);
+      location.reload();
+    }, 3000);
   }, []);
 
   return (
     <BrowserRouter>
-      {isWelcome && <Header />}
+      {isVisit && <Header />}
       <Routes>
-        {isWelcome ? (
+        {isVisit ? (
           <>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -36,9 +39,10 @@ const App = () => {
           <Route path="*" element={<Intro />} />
         )}
       </Routes>
-      {isWelcome && <Footer />}
+      {isVisit && <Footer />}
       <ScrollTop />
     </BrowserRouter>
   );
 };
+
 export default App;
