@@ -41,7 +41,7 @@ const S07 = () => {
             <br />
             언제 어디서나 쉽고 빠르게 르브레 멀티밤으로 케어해주세요.
           </p>
-          <LinkButton link={'/product'} title="SHOP NOW" isWhite="transparent" />
+          <LinkButton link={'/product'} title="SHOP NOW" color={'purple'} />
         </div>
       </div>
       <div className={cx('cover')} ref={coverRef} />

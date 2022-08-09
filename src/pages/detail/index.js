@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 import gsap from 'gsap';
-
 import { useParams } from 'react-router-dom';
 
 import AutoCarousel from '../../components/global/autoCarousel';
