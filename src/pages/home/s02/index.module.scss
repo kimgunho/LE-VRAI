@@ -1,8 +1,9 @@
 @import '../../../common.scss';
 
-.wrapper {
+.container {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 48rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,12 +11,16 @@
   @include backgroundCenter;
 
   > .desc {
-    padding: 0 2rem;
-    box-sizing: border-box;
     text-align: center;
-    color: #fff;
+    color: white;
     font-size: 2rem;
     line-height: 1.6;
     font-weight: 300;
+    opacity: 0;
+    transition: opacity 1s;
+
+    &.enable {
+      opacity: 1;
+    }
   }
 }
