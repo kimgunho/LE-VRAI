@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 import { useParams } from 'react-router-dom';
 
@@ -19,11 +20,25 @@ const cx = classNames.bind(styles);
 const Detail = () => {
   const { title } = useParams();
   const productObj = productInfoObj[title];
+  const observeRef = useRef(null);
+  const [isOverlap, setIsOverlap] = useState(true);
+
+  useEffect(() => {
+    if (observeRef.current) {
+      const observer = new IntersectionObserver(
+        (entry) => {
+          setIsOverlap(entry[0].isIntersecting);
+        },
+        { threshold: 0.2 },
+      );
+      observer.observe(observeRef.current);
+    }
+  }, [title]);
 
   return (
     <main className={cx('wrapper')}>
       <div className={cx('flexBox')}>
-        <div className={cx('productContainer')}>
+        <div className={cx(['productContainer', isOverlap || 'active'])}>
           <BasicInfo dataObj={productObj} />
         </div>
         <article className={cx(['detailBody', title])}>
@@ -34,7 +49,7 @@ const Detail = () => {
           {title === 'ROSE' && <ROSE />}
         </article>
       </div>
-
+      <div ref={observeRef} className={cx('observe')} />
       <div className={cx('bottomBox')}>
         <div className={cx('autoSliderBox')}>
           <AutoCarousel />

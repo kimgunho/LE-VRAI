@@ -9,36 +9,62 @@ $purple: #aa3bf0;
   padding: 1.625rem 3.625rem;
   white-space: nowrap;
   transition: all 0.2s ease-in;
+  border: 1px solid;
   @include fontEn;
 
-  &.borderWhite {
-    border: 1px solid #fff;
-  }
-
-  &.true {
+  &.black {
+    border-color: #000;
     color: #000;
-    background-color: #fff;
+
+    @include pc_hover {
+      &:hover {
+        border-color: #000;
+        background-color: #000;
+        color: #fff;
+      }
+    }
   }
 
-  &.false {
+  &.white {
+    border-color: #fff;
     color: #fff;
-    background-color: #000;
-  }
-
-  &.purple {
-    color: $purple;
-  }
-
-  &.BLEU {
-    color: $blue;
-  }
-  &.ROUGE {
-    color: $red;
-  }
-  &.ROSE {
-    color: $pink;
-  }
-  &.VERT {
-    color: $green;
+    @include pc_hover {
+      &.purple {
+        &:hover {
+          color: $purple;
+          background-color: #fff;
+        }
+      }
+      &.BLEU {
+        &:hover {
+          color: $blue;
+          background-color: #fff;
+        }
+      }
+      &.ROUGE {
+        &:hover {
+          color: $red;
+          background-color: #fff;
+        }
+      }
+      &.ROSE {
+        &:hover {
+          color: $pink;
+          background-color: #fff;
+        }
+      }
+      &.VERT {
+        &:hover {
+          color: $green;
+          background-color: #fff;
+        }
+      }
+      &.black {
+        &:hover {
+          color: #000;
+          background-color: #fff;
+        }
+      }
+    }
   }
 }

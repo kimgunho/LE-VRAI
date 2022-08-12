@@ -60,7 +60,7 @@ const ProductCard = ({ data }) => {
         <span className={cx('subTitle')}>{data.descTitle}</span>
         {data.desc}
       </p>
-      <LinkButton title={'SHOP NOW'} link={data.link} isWhite={true} color={data.title} />
+      <LinkButton title={'SHOP NOW'} link={data.link} color={data.title} />
     </div>
   );
 };
