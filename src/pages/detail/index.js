@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 import { useParams } from 'react-router-dom';
+import { BsBoxArrowRight, BsBoxArrowLeft } from 'react-icons/bs';
 
 import AutoCarousel from '../../components/global/autoCarousel';
 import BasicInfo from '../../components/detail/basicInfo';
@@ -21,6 +22,7 @@ const Detail = () => {
   const { title } = useParams();
   const productObj = productInfoObj[title];
   const observeRef = useRef(null);
+  const [hasInfoOpen, setHasInfoOpen] = useState(false);
   const [isOverlap, setIsOverlap] = useState(true);
 
   useEffect(() => {
@@ -35,10 +37,19 @@ const Detail = () => {
     }
   }, [title]);
 
+  const handleHasInfoToggle = () => {
+    setHasInfoOpen((isPrev) => {
+      return !isPrev;
+    });
+  };
+
   return (
     <main className={cx('wrapper')}>
       <div className={cx('flexBox')}>
-        <div className={cx(['productContainer', isOverlap || 'active'])}>
+        <button className={cx(['detailViewButton', hasInfoOpen && title, `color${title}`])} type="button" onClick={handleHasInfoToggle}>
+          {hasInfoOpen ? <BsBoxArrowRight /> : <BsBoxArrowLeft />}
+        </button>
+        <div className={cx(['productContainer', isOverlap || 'active', hasInfoOpen && 'open'])}>
           <BasicInfo dataObj={productObj} />
         </div>
         <article className={cx(['detailBody', title])}>

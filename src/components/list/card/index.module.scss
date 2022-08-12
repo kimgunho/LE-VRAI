@@ -11,6 +11,11 @@
   text-align: center;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
+
+  @include mobile {
+    width: 100%;
+  }
 
   &.BLEU {
     background-color: $blue;
@@ -45,6 +50,10 @@
     max-width: 13.125rem;
     position: relative;
     z-index: 10;
+
+    @include mobile {
+      max-width: 10rem;
+    }
   }
   > .backgroundTitle {
     position: absolute;
@@ -57,5 +66,13 @@
     color: #fff;
     opacity: 0.2;
     @include fontEn;
+
+    @include desktop {
+      font-size: 12.5rem;
+    }
+
+    @include mobile {
+      font-size: 10rem;
+    }
   }
 }
