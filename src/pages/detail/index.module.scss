@@ -1,6 +1,7 @@
 @import '../../common.scss';
 
 .wrapper {
+  overflow: hidden;
   > .flexBox {
     position: relative;
     display: flex;
