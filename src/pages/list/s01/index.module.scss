@@ -8,11 +8,24 @@
   justify-content: center;
   background-image: url('../../../asset/images/product/s01_background.jpg');
   @include backgroundCenter;
+  overflow: hidden;
 
   > .title {
+    text-align: center;
     font-size: 18.125rem;
     line-height: 1.4;
     color: #fff;
     @include fontEn;
+
+    @include desktop {
+      font-size: 12.5rem;
+    }
+    @include tablet {
+      line-height: 2;
+      font-size: 8rem;
+    }
+    @include mobile {
+      font-size: 4.5rem;
+    }
   }
 }

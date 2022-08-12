@@ -23,6 +23,13 @@
       word-break: keep-all;
       margin-bottom: 5.625rem;
 
+      @include tablet {
+        font-size: 3rem;
+      }
+      @include mobile {
+        font-size: 2rem;
+      }
+
       > span {
         transition: opacity 0.2s ease-in;
         opacity: 0.1;

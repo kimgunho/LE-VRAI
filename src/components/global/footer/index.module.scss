@@ -7,12 +7,20 @@
   z-index: 20;
   position: relative;
 
+  @include mobile {
+    padding: 3rem;
+  }
+
   > .title {
     color: #fff;
     font-size: 4.5rem;
     font-weight: 600;
     margin-bottom: 6.875rem;
     @include fontEn;
+
+    @include mobile {
+      margin-bottom: 3rem;
+    }
   }
 
   > .flex {
@@ -23,7 +31,16 @@
     padding-bottom: 2.5rem;
     margin-bottom: 2.5rem;
 
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     > .info {
+      @include mobile {
+        margin-bottom: 2.5rem;
+      }
+
       > li {
         > a {
           color: #fff;
