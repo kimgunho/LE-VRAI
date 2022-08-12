@@ -2,7 +2,9 @@
 
 .wrapper {
   background-color: #fff;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -56,12 +58,21 @@
   > .paddingBox {
     padding: 7rem 7rem 0rem 7rem;
     box-sizing: border-box;
+    width: 100%;
+
+    @include mobile {
+      padding: 3rem;
+    }
 
     > .subDesc {
       font-size: 1.75rem;
       line-height: 1.6;
       font-weight: 400;
       @include fontEn;
+
+      @include mobile {
+        font-size: 1.25rem;
+      }
     }
 
     > .title {
@@ -69,15 +80,31 @@
       font-weight: 600;
       @include fontEn;
 
+      @include mobile {
+        font-size: 3rem;
+      }
+
       > span {
         font-size: 2.375rem;
+
+        @include mobile {
+          font-size: 1.25rem;
+        }
       }
     }
     > .desc {
-      margin: 1.375rem 0 2.25rem 0;
+      margin: 1.375rem 0 2.25rem;
       font-size: 1.375rem;
       line-height: 1.6;
       word-break: keep-all;
+
+      @include mobile {
+        font-size: 1.25rem;
+        margin: 1rem 0 2rem;
+        > br {
+          display: none;
+        }
+      }
 
       > span {
         font-weight: 500;
@@ -99,10 +126,21 @@
 
           > strong {
             font-weight: 600;
+
+            @include mobile {
+              display: block;
+              margin-bottom: 0.5rem;
+            }
           }
           > span {
             font-weight: 500;
             padding: 0 1rem;
+
+            @include mobile {
+              padding: 0;
+              line-height: 2;
+              display: block;
+            }
           }
         }
       }
@@ -112,6 +150,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include mobile {
+        padding: 1.5rem 0;
+      }
 
       > .FAQButton {
         font-size: 1.5rem;
@@ -130,6 +172,10 @@
       padding: 1.75rem 7rem;
       width: 100%;
 
+      @include mobile {
+        padding: 1.75rem 3rem;
+      }
+
       > ul {
         > li {
           margin-bottom: 1.25rem;
@@ -139,6 +185,10 @@
           display: flex;
           align-items: center;
           @include fontEn;
+
+          @include mobile {
+            font-size: 1.25rem;
+          }
 
           &:last-of-type {
             margin-bottom: 0;
@@ -163,7 +213,12 @@
       padding: 0.5rem 7rem;
       font-size: 0.875rem;
       color: #fff;
+      line-height: 1.4;
       background-color: #000;
+
+      @include mobile {
+        padding: 1rem 3rem;
+      }
     }
   }
 }

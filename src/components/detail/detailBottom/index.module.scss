@@ -17,6 +17,10 @@
     cursor: pointer;
     box-sizing: border-box;
 
+    @include mobile {
+      padding: 1.5rem;
+    }
+
     &.BLEU {
       background-color: $blue;
     }
@@ -36,6 +40,8 @@
       font-weight: 400;
       text-decoration: underline;
       margin-bottom: 1.625rem;
+      text-align: center;
+      line-height: 1.6;
       @include fontEn;
     }
     > .title {
@@ -51,6 +57,11 @@
       position: relative;
       z-index: 10;
       @include backgroundCenter;
+      background-size: contain;
+
+      @include mobile {
+        height: 10rem;
+      }
 
       &.BLEU {
         background-image: url('../../../asset/images/product/blue_balm_unopen.png');
@@ -99,6 +110,10 @@
       color: #fff;
       opacity: 0.2;
       @include fontEn;
+
+      @include mobile {
+        font-size: 3.5rem;
+      }
     }
   }
 }

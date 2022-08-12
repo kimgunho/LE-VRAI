@@ -12,6 +12,11 @@ $purple: #aa3bf0;
   border: 1px solid;
   @include fontEn;
 
+  @include mobile {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
   &.black {
     border-color: #000;
     color: #000;
