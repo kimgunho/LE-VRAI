@@ -17,6 +17,13 @@
       text-align: center;
       white-space: nowrap;
       @include fontEn;
+
+      @include tablet {
+        font-size: 10rem;
+      }
+      @include mobile {
+        font-size: 5rem;
+      }
     }
     > .desc {
       padding: 0 2rem;
@@ -29,6 +36,12 @@
       opacity: 0;
       animation: fadeIn 3s forwards linear;
       @include fontEn;
+
+      @include mobile {
+        > br {
+          display: none;
+        }
+      }
 
       @keyframes fadeIn {
         0% {

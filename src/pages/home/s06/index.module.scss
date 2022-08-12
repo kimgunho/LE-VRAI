@@ -32,6 +32,13 @@
       margin-bottom: 2rem;
       white-space: nowrap;
       @include fontEn;
+
+      @include tablet {
+        font-size: 6rem;
+      }
+      @include mobile {
+        font-size: 4rem;
+      }
     }
 
     > .desc {
@@ -40,6 +47,14 @@
       font-weight: 300;
       line-height: 1.8;
       word-break: keep-all;
+
+      @include mobile {
+        font-size: 1.25rem;
+
+        > br {
+          display: none;
+        }
+      }
 
       > span {
         font-weight: 500;

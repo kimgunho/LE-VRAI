@@ -43,6 +43,23 @@
           color: #000;
           white-space: nowrap;
           @include fontEn;
+
+          @include desktop {
+            font-size: 1.35rem;
+          }
+
+          @include tablet {
+            font-size: 1.25rem;
+            &:nth-of-type(5) {
+              display: none;
+            }
+            &:nth-of-type(6) {
+              display: none;
+            }
+          }
+          @include mobile {
+            font-size: 0.875rem;
+          }
         }
       }
     }

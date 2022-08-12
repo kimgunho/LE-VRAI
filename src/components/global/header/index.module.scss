@@ -13,6 +13,11 @@
   z-index: 50;
   transition: background-color 0.5s ease;
 
+  @include mobile {
+    // TODO : after...
+    display: none;
+  }
+
   &.active {
     background-color: #fff;
 
