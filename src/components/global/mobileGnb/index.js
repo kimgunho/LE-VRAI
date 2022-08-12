@@ -18,16 +18,16 @@ const MobileGnbComponent = ({ setIsMobileGnb }) => {
       <li>
         <img src={logoWhiteSrc} alt="" />
       </li>
-      <li>
+      <li onClick={handleHideMobileGnb}>
         <Link to="/">HOME</Link>
       </li>
-      <li>
+      <li onClick={handleHideMobileGnb}>
         <Link to="/about">ABOUT</Link>
       </li>
-      <li>
+      <li onClick={handleHideMobileGnb}>
         <Link to="/product">PRODUCT</Link>
       </li>
-      <li>
+      <li onClick={handleHideMobileGnb}>
         <Link to="/about#contact">CONTACT</Link>
       </li>
       <li>
