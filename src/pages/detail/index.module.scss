@@ -1,15 +1,101 @@
 @import '../../common.scss';
 
 .wrapper {
+  overflow: hidden;
   > .flexBox {
+    position: relative;
     display: flex;
+    justify-content: flex-end;
+
+    > .detailViewButton {
+      display: none;
+
+      @include desktop {
+        position: fixed;
+        top: 10rem;
+        right: 3rem;
+        z-index: 50;
+        width: 5rem;
+        height: 5rem;
+        font-size: 3rem;
+        background-color: #fff;
+        display: flex;
+        box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.25);
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        border-radius: 1rem;
+
+        @include mobile {
+          top: 6rem;
+          width: 4rem;
+          height: 4rem;
+          right: 2rem;
+          font-size: 2.5rem;
+        }
+
+        &.colorBLEU {
+          color: $blue;
+        }
+        &.colorVERT {
+          color: $green;
+        }
+        &.colorROUGE {
+          color: $red;
+        }
+        &.colorROSE {
+          color: $pink;
+        }
+        &.BLEU {
+          color: #fff;
+          background-color: $blue;
+        }
+        &.VERT {
+          color: #fff;
+          background-color: $green;
+        }
+        &.ROUGE {
+          color: #fff;
+          background-color: $red;
+        }
+        &.ROSE {
+          color: #fff;
+          background-color: $pink;
+        }
+      }
+    }
 
     > .productContainer {
       width: 50vw;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all 0.2s ease;
+      z-index: 40;
+
+      @include desktop {
+        width: 100vw;
+        margin-left: -100vw;
+
+        &.open {
+          margin-left: 0;
+        }
+      }
+
+      &.active {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+      }
     }
 
     > .detailBody {
       width: 50vw;
+
+      @include desktop {
+        width: 100vw;
+      }
 
       &.BLEU {
         background-color: $softBlueBg;
@@ -23,6 +109,17 @@
       &.ROSE {
         background-color: $softPinkBg;
       }
+    }
+  }
+  > .observe {
+    height: 1px;
+  }
+  > .bottomBox {
+    position: relative;
+    z-index: 30;
+
+    > .autoSliderBox {
+      background-color: #f9f9f9;
     }
   }
 }

@@ -14,7 +14,12 @@
     flex-direction: column;
     overflow: hidden;
     padding: 2.5rem;
+    cursor: pointer;
     box-sizing: border-box;
+
+    @include mobile {
+      padding: 1.5rem;
+    }
 
     &.BLEU {
       background-color: $blue;
@@ -35,6 +40,8 @@
       font-weight: 400;
       text-decoration: underline;
       margin-bottom: 1.625rem;
+      text-align: center;
+      line-height: 1.6;
       @include fontEn;
     }
     > .title {
@@ -43,11 +50,54 @@
       margin-bottom: 2.5rem;
       color: #fff;
     }
-    > img {
-      width: 100%;
-      max-width: 7.5rem;
+    > .productBackground {
+      width: 7.5rem;
+      height: 22rem;
+      margin-bottom: 2rem;
       position: relative;
       z-index: 10;
+      @include backgroundCenter;
+      background-size: contain;
+
+      @include mobile {
+        height: 10rem;
+      }
+
+      &.BLEU {
+        background-image: url('../../../asset/images/product/blue_balm_unopen.png');
+        @include pc_hover {
+          &:hover {
+            background-image: url('../../../asset/images/product/blue_balm_open.png');
+          }
+        }
+      }
+
+      &.VERT {
+        background-image: url('../../../asset/images/product/green_balm_unopen.png');
+        @include pc_hover {
+          &:hover {
+            background-image: url('../../../asset/images/product/green_balm_open.png');
+          }
+        }
+      }
+
+      &.ROUGE {
+        background-image: url('../../../asset/images/product/red_balm_unopen.png');
+        @include pc_hover {
+          &:hover {
+            background-image: url('../../../asset/images/product/red_balm_open.png');
+          }
+        }
+      }
+
+      &.ROSE {
+        background-image: url('../../../asset/images/product/pink_balm_unopen.png');
+        @include pc_hover {
+          &:hover {
+            background-image: url('../../../asset/images/product/pink_balm_open.png');
+          }
+        }
+      }
     }
     > .backgroundText {
       position: absolute;
@@ -60,6 +110,10 @@
       color: #fff;
       opacity: 0.2;
       @include fontEn;
+
+      @include mobile {
+        font-size: 3.5rem;
+      }
     }
   }
 }

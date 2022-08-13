@@ -22,9 +22,9 @@ const DetailBottom = ({ currentTitle, data }) => {
           <li key={product.title} className={cx(product.title)}>
             <p className={cx('subDesc')}> RORO MULTI BALM </p>
             <h3 className={cx('title')}>{product.name}</h3>
-            <img src={product.unOpenImage} alt={product.name} />
+            <div className={cx('productBackground', product.title)}></div>
             <p className={cx('backgroundText')}>{product.title}</p>
-            <LinkButton isWhite="transparent" link={product.link} title="SHOP NOW" />
+            <LinkButton isWhite={true} link={product.link} title="SHOP NOW" color={product.title} />
           </li>
         ))}
     </ul>

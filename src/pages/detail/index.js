@@ -1,8 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
-import gsap from 'gsap';
-
 import { useParams } from 'react-router-dom';
+import { BsBoxArrowRight, BsBoxArrowLeft } from 'react-icons/bs';
 
 import AutoCarousel from '../../components/global/autoCarousel';
 import BasicInfo from '../../components/detail/basicInfo';
@@ -20,29 +19,37 @@ import styles from './index.module.scss';
 const cx = classNames.bind(styles);
 
 const Detail = () => {
-  const pinRef = useRef();
-  const productContainerRef = useRef();
-
   const { title } = useParams();
   const productObj = productInfoObj[title];
+  const observeRef = useRef(null);
+  const [hasInfoOpen, setHasInfoOpen] = useState(false);
+  const [isOverlap, setIsOverlap] = useState(true);
 
   useEffect(() => {
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: pinRef.current,
-        scrub: true,
-        pin: productContainerRef.current,
-        start: 'top top',
-        end: 'bottom bottom',
-        pinSpacing: false,
-      },
+    if (observeRef.current) {
+      const observer = new IntersectionObserver(
+        (entry) => {
+          setIsOverlap(entry[0].isIntersecting);
+        },
+        { threshold: 0.2 },
+      );
+      observer.observe(observeRef.current);
+    }
+  }, [title]);
+
+  const handleHasInfoToggle = () => {
+    setHasInfoOpen((isPrev) => {
+      return !isPrev;
     });
-  }, [title, productContainerRef.current]);
+  };
 
   return (
     <main className={cx('wrapper')}>
-      <div className={cx('flexBox')} ref={pinRef}>
-        <div className={cx('productContainer')} ref={productContainerRef}>
+      <div className={cx('flexBox')}>
+        <button className={cx(['detailViewButton', hasInfoOpen && title, `color${title}`])} type="button" onClick={handleHasInfoToggle}>
+          {hasInfoOpen ? <BsBoxArrowRight /> : <BsBoxArrowLeft />}
+        </button>
+        <div className={cx(['productContainer', isOverlap || 'active', hasInfoOpen && 'open'])}>
           <BasicInfo dataObj={productObj} />
         </div>
         <article className={cx(['detailBody', title])}>
@@ -53,11 +60,13 @@ const Detail = () => {
           {title === 'ROSE' && <ROSE />}
         </article>
       </div>
-
-      <div className={cx('autoSliderBox')}>
-        <AutoCarousel />
+      <div ref={observeRef} className={cx('observe')} />
+      <div className={cx('bottomBox')}>
+        <div className={cx('autoSliderBox')}>
+          <AutoCarousel />
+        </div>
+        <DetailBottom currentTitle={title} data={productArr} />
       </div>
-      <DetailBottom currentTitle={title} data={productArr} />
     </main>
   );
 };

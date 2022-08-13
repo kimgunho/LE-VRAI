@@ -9,6 +9,10 @@
   padding: 7.5rem 0;
   text-align: center;
 
+  @include desktop {
+    padding: 7.5rem 3rem;
+  }
+
   > .title {
     width: 8.75rem;
     margin-bottom: 5.25rem;
@@ -22,8 +26,24 @@
     line-height: 1.6;
     margin-bottom: 6.25rem;
 
+    @include tablet {
+      line-height: 2;
+      font-size: 1.5rem;
+
+      > br {
+        display: none;
+      }
+    }
+    @include mobile {
+      font-size: 1.25rem;
+    }
+
     > span {
       font-size: 1.25rem;
+
+      @include mobile {
+        font-size: 1rem;
+      }
     }
   }
   > .list {
@@ -37,9 +57,24 @@
       font-weight: 600;
       @include fontEn;
 
+      @include tablet {
+        font-size: 2.5rem;
+      }
+      @include tablet {
+        font-size: 1.75rem;
+      }
+
       &:after {
         content: '|';
         padding: 0 4rem;
+
+        @include tablet {
+          padding: 0 2rem;
+        }
+
+        @include mobile {
+          padding: 0 1rem;
+        }
       }
 
       &:last-of-type {

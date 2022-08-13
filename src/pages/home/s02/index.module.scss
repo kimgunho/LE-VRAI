@@ -22,5 +22,12 @@
     &.enable {
       opacity: 1;
     }
+
+    @include mobile {
+      line-height: 2;
+      > br {
+        display: none;
+      }
+    }
   }
 }
