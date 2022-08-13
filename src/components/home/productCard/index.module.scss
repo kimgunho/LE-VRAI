@@ -69,38 +69,42 @@
       position: absolute;
       transform: translate(0, -50%);
       transition: all 0.2s ease-in;
+      width: 100%;
+      max-width: 37.5rem;
+
+      @include desktop {
+        max-width: 28.125rem;
+      }
+      @include tablet {
+        max-width: 18.75rem;
+      }
+      @include mobile {
+        max-width: 12.5rem;
+      }
 
       &.left {
         animation: slowBounceUp 3s infinite ease-in;
         &.red {
-          width: 100%;
-          max-width: 21rem;
           z-index: 20;
-          top: 14.375rem;
-          left: -13.25rem;
+          top: 14rem;
+          left: -15rem;
         }
 
         &.pink {
-          width: 100%;
-          max-width: 20rem;
-          top: 16.875rem;
+          top: 16rem;
           left: -14rem;
           z-index: 20;
         }
 
         &.green {
-          width: 100%;
-          max-width: 27rem;
           top: 20rem;
           z-index: 20;
           left: -15rem;
         }
 
         &.blue {
-          width: 100%;
-          max-width: 21rem;
-          top: 9.0625rem;
-          left: -12.875rem;
+          top: 9rem;
+          left: -12rem;
           z-index: 20;
         }
       }
@@ -108,35 +112,27 @@
       &.right {
         animation: slowBounceUp 4s infinite ease-in;
         &.red {
-          width: 100%;
           z-index: 20;
-          max-width: 22rem;
-          right: -8.75rem;
-          top: 7.5rem;
+          right: -8rem;
+          top: 7rem;
         }
 
         &.pink {
-          width: 100%;
           z-index: 20;
-          max-width: 21rem;
-          right: -15.75rem;
-          top: 8.5rem;
+          right: -15rem;
+          top: 8rem;
         }
 
         &.green {
-          width: 100%;
           z-index: 20;
-          max-width: 15rem;
-          right: -12.875rem;
-          top: 10.625rem;
+          right: -18rem;
+          top: 10rem;
         }
 
         &.blue {
-          width: 100%;
           z-index: 20;
-          max-width: 25rem;
           right: -19rem;
-          top: 16.25rem;
+          top: 16rem;
         }
       }
 
