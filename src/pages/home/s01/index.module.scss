@@ -18,11 +18,11 @@
     white-space: nowrap;
     @include fontEn;
 
-    @include tablet{
-        font-size:10rem;
+    @include tablet {
+      font-size: 10rem;
     }
-    @include mobile{
-        font-size:5rem;
+    @include mobile {
+      font-size: 5rem;
     }
   }
   > .desc {
@@ -30,15 +30,16 @@
     text-align: center;
     font-size: 1.6rem;
     line-height: 1.8;
+    color: white;
     font-weight: 600;
     opacity: 0;
     animation: fadeIn 2s forwards linear;
     @include fontEn;
 
     @include mobile {
-        > br {
-          display: none;
-        }
+      > br {
+        display: none;
+      }
     }
   }
 }
