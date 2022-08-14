@@ -44,8 +44,11 @@
       font-weight: 600;
       @include fontEn;
 
+      @include desktop {
+        font-size: 14rem;
+      }
       @include tablet {
-        font-size: 10rem;
+        font-size: 8rem;
       }
       @include mobile {
         font-size: 5rem;
@@ -86,26 +89,38 @@
         animation: slowBounceUp 3s infinite ease-in;
         &.red {
           z-index: 20;
-          top: 14rem;
-          left: -15rem;
+          top: 50%;
+          left: -30%;
+          @include mobile {
+            left: -40%;
+          }
         }
 
         &.pink {
-          top: 16rem;
-          left: -14rem;
+          top: 60%;
+          left: -30%;
           z-index: 20;
+          @include mobile {
+            left: -45%;
+          }
         }
 
         &.green {
-          top: 20rem;
+          top: 100%;
           z-index: 20;
-          left: -15rem;
+          left: -50%;
+          @include mobile {
+            left: -60%;
+          }
         }
 
         &.blue {
-          top: 9rem;
-          left: -12rem;
+          top: 0%;
+          left: -40%;
           z-index: 20;
+          @include mobile {
+            left: -50%;
+          }
         }
       }
 
@@ -113,26 +128,38 @@
         animation: slowBounceUp 4s infinite ease-in;
         &.red {
           z-index: 20;
-          right: -8rem;
-          top: 7rem;
+          right: -30%;
+          top: 40%;
+          @include mobile {
+            right: -40%;
+          }
         }
 
         &.pink {
           z-index: 20;
-          right: -15rem;
-          top: 8rem;
+          right: -40%;
+          top: 40%;
+          @include mobile {
+            right: -50%;
+          }
         }
 
         &.green {
           z-index: 20;
-          right: -18rem;
-          top: 10rem;
+          right: -50%;
+          top: 80%;
+          @include mobile {
+            right: -60%;
+          }
         }
 
         &.blue {
           z-index: 20;
-          right: -19rem;
-          top: 16rem;
+          right: -50%;
+          top: 90%;
+          @include mobile {
+            right: -60%;
+          }
         }
       }
 
