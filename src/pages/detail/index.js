@@ -60,8 +60,7 @@ const Detail = () => {
           {title === 'ROSE' && <ROSE />}
         </article>
       </div>
-      <div ref={observeRef} className={cx('observe')} />
-      <div className={cx('bottomBox')}>
+      <div className={cx('bottomBox')} ref={observeRef}>
         <div className={cx('autoSliderBox')}>
           <AutoCarousel />
         </div>
