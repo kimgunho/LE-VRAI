@@ -1,56 +1,54 @@
 @import '../../../common.scss';
 
-.wrapper {
+.container {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 48rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url('../../../asset/images/home/s01_background.jpg');
   @include backgroundCenter;
 
-  > .info {
-    > .title {
-      font-size: 15rem;
-      color: #fff;
-      font-weight: 600;
-      text-align: center;
-      white-space: nowrap;
-      @include fontEn;
+  > .title {
+    font-size: 16rem;
+    color: white;
+    font-weight: 600;
+    white-space: nowrap;
+    @include fontEn;
 
-      @include tablet {
-        font-size: 10rem;
-      }
-      @include mobile {
-        font-size: 5rem;
+    @include tablet {
+      font-size: 10rem;
+    }
+    @include mobile {
+      font-size: 5rem;
+    }
+  }
+  > .desc {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: white;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeIn 2s forwards linear;
+    @include fontEn;
+
+    @include mobile {
+      > br {
+        display: none;
       }
     }
-    > .desc {
-      padding: 0 2rem;
-      box-sizing: border-box;
-      text-align: center;
-      color: #fff;
-      font-size: 1.5rem;
-      line-height: 1.6;
-      font-weight: 600;
-      opacity: 0;
-      animation: fadeIn 3s forwards linear;
-      @include fontEn;
+  }
+}
 
-      @include mobile {
-        > br {
-          display: none;
-        }
-      }
-
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
